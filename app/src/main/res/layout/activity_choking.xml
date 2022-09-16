@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="319dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/choke" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="310dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nStep 2:  Laoreet suspendisse interdum consectetur libero id faucibus.\nStep 3: Nunc mattis enim ut tellus elementum sagittis vitae.\nStep 4: Phasellus vestibulum lorem sed risus. Egestas sed tempus urna et."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="319dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:padding="3dp"
+                android:src="@drawable/breathing" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="310dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nStep 6:  Laoreet suspendisse interdum consectetur libero id faucibus.\nStep 7: Nunc mattis enim ut tellus elementum sagittis vitae.\nStep 8: Phasellus vestibulum lorem sed risus. Egestas sed tempus urna et."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/EmergencyRed"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:src="@drawable/dog_icon"></ImageView>
+    </LinearLayout>
+
+
+</RelativeLayout>
