@@ -6,31 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="vertical"
-        android:background="@color/EmergencyRed"
-        android:padding="5dp">
+        android:id="@+id/app_bar_layout">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="180dp"
-            android:layout_marginBottom="5dp"
-            android:padding="4dp"
-            android:src="@drawable/dog_icon">
-        </ImageView>
-    </LinearLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width = "match_parent"
+            android:background="@color/EmergencyRed"
+            android:layout_height = "?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_profile"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dog_icon">
+            </ImageView>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="60dp">
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/button_choke"
@@ -38,11 +44,10 @@
                 android:layout_height="154dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
+                android:backgroundTint="@color/RoyalBlue"
                 android:padding="3dp"
                 android:text="Choking"
-                android:textSize="40sp"
-                android:backgroundTint="@color/RoyalBlue"
-                />
+                android:textSize="40sp" />
 
             <Button
                 android:id="@+id/button_bleed"
@@ -50,11 +55,10 @@
                 android:layout_height="154dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
+                android:backgroundTint="@color/EmergencyRed"
                 android:padding="3dp"
                 android:text="Bleeding"
-                android:textSize="40sp"
-                android:backgroundTint="@color/EmergencyRed"
-                />
+                android:textSize="40sp" />
 
             <Button
                 android:id="@+id/button_breath"
@@ -62,14 +66,13 @@
                 android:layout_height="154dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
+                android:backgroundTint="@color/Goldenrod"
                 android:padding="3dp"
                 android:text="Not Breathing"
-                android:textSize="40sp"
-                android:backgroundTint="@color/Goldenrod"
-                />
-
+                android:textSize="40sp" />
 
         </LinearLayout>
+
 
     </ScrollView>
 

@@ -10,17 +10,17 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private Button choke_but;
+    private ImageButton profile_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
-        getSupportActionBar().hide(); // hide the title bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+
         setContentView(R.layout.activity_main);
 
         choke_but = findViewById(R.id.button_choke);
@@ -30,10 +30,24 @@ public class MainActivity extends AppCompatActivity {
                 openChokeActivity();
             }
         });
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openProfileActivity();
+            }
+        });
     }
 
     public void openChokeActivity(){
        Intent intent = new Intent(this, choking.class);
        startActivity(intent);
+    }
+
+    public void openProfileActivity(){
+        Intent intent2 = new Intent(this, ProfileActivity.class);
+        startActivity(intent2);
     }
 }

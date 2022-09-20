@@ -84,21 +84,27 @@
 
     </ScrollView>
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/EmergencyRed"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:id="@+id/app_bar_layout2">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="180dp"
-            android:layout_marginBottom="5dp"
-            android:padding="4dp"
-            android:src="@drawable/dog_icon"></ImageView>
-    </LinearLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width = "match_parent"
+            android:background="@color/EmergencyRed"
+            android:layout_height = "?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_profile"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dog_icon">
+            </ImageView>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
 </RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "998104472802",
+    "project_id": "petmergency-efb5b",
+    "storage_bucket": "petmergency-efb5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998104472802:android:e9345a0da9ca5ab99652bb",
+        "android_client_info": {
+          "package_name": "com.example.petmergency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998104472802-2a3ft81lcfb6cdlptvb1lcl99dcu1iub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW87JxrNSMqFfPnnmvr4XiwYTmTCg45LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998104472802-2a3ft81lcfb6cdlptvb1lcl99dcu1iub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
