@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".medication">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/app_bar_layout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width = "match_parent"
+            android:background="@color/EmergencyRed"
+            android:layout_height = "?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_profile"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dog_icon">
+            </ImageView>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medication"
+            android:textSize="50dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black">
+        </TextView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/add_med"
+            android:text="Add medication"
+            android:drawableLeft="@drawable/ic_add"
+            android:backgroundTint="@color/EmergencyRed"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp">
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/fade_bg"
+                        android:padding="3dp"
+                        android:layout_gravity="center">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Apoquel"
+                                android:textStyle="bold"
+                                android:textSize="23sp"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/White"
+                                android:layout_marginLeft="15dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Next dose on 9/23/22"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:layout_marginLeft="15dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dosage: 3.6Mg"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="15dp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/fade_bg"
+                    android:padding="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Carprofen"
+                            android:textStyle="bold"
+                            android:textSize="23sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next dose on 9/23/22"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dosage: 100Mg"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="15dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/fade_bg"
+                    android:padding="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Place Holder"
+                            android:textStyle="bold"
+                            android:textSize="23sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next dose on "
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dosage: NanMg"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="15dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/fade_bg"
+                    android:padding="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Place Holder"
+                            android:textStyle="bold"
+                            android:textSize="23sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next dose on "
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dosage: NanMg"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="15dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/fade_bg"
+                    android:padding="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Place Holder"
+                            android:textStyle="bold"
+                            android:textSize="23sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next dose on "
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dosage: NaNMg"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="15dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
