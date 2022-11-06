@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Petmergency"
         tools:targetApi="31">
         <activity
+            android:name=".Notes"
+            android:exported="false" />
+        <activity
             android:name=".medication"
             android:exported="false" />
         <activity

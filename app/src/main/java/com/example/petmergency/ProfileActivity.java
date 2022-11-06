@@ -21,6 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
     ImageView prof_img;
     private Button open_calendar;
     private Button open_med;
+    private Button open_notes;
     String calendar = "com.google.android.calendar";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +67,14 @@ public class ProfileActivity extends AppCompatActivity {
              openMedActivity();
             }
         });
+
+        open_notes = findViewById(R.id.button_notes);
+        open_notes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNotesActivity();
+            }
+        });
     }
 
     @Override
@@ -80,6 +89,11 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void openMedActivity(){
         Intent intent = new Intent(this, medication.class);
+        startActivity(intent);
+    }
+
+    public void openNotesActivity(){
+        Intent intent = new Intent(this, Notes.class);
         startActivity(intent);
     }
 }

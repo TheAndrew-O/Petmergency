@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medication"
+            android:text="Notes"
             android:textSize="50dp"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -49,7 +49,7 @@
             android:id="@+id/add_med"
             android:text="Add medication"
             android:drawableLeft="@drawable/ic_add"
-            android:backgroundTint="@color/EmergencyRed"/>
+            android:backgroundTint="@color/RoyalBlue"/>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -66,9 +66,9 @@
                     android:layout_marginTop="30dp">
                     <LinearLayout
                         android:layout_width="350dp"
-                        android:layout_height="100dp"
+                        android:layout_height="80dp"
                         android:orientation="horizontal"
-                        android:background="@drawable/fade_yg"
+                        android:background="@drawable/fade_bg"
                         android:padding="3dp"
                         android:layout_gravity="center">
                         <LinearLayout
@@ -78,26 +78,22 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Apoquel"
-                                android:textStyle="bold"
-                                android:textSize="23sp"
-                                android:layout_marginTop="10dp"
-                                android:textColor="@color/White"
-                                android:layout_marginLeft="15dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Next dose on 9/23/22"
+                                android:text="Lorem ipsum dolor sit amet..."
                                 android:textStyle="bold"
                                 android:textSize="18sp"
-                                android:layout_marginLeft="15dp"/>
+                                android:layout_marginTop="25dp"
+                                android:textColor="@color/White"
+                                android:layout_marginLeft="10dp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Dosage: 3.6Mg"
+                                android:text="MM/DD/YY"
                                 android:textStyle="bold"
-                                android:textSize="12sp"
-                                android:layout_marginLeft="15dp"/>
+                                android:textSize="10sp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/Gray"
+                                android:layout_marginLeft="10dp"/>
+
 
                         </LinearLayout>
                     </LinearLayout>
@@ -105,12 +101,12 @@
 
                 <LinearLayout
                     android:layout_width="350dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="horizontal"
-                    android:background="@drawable/fade_yg"
+                    android:background="@drawable/fade_bg"
                     android:padding="3dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="15dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -119,38 +115,35 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Carprofen"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Next dose on 9/23/22"
+                            android:text="Lorem ipsum dolor sit amet..."
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:layout_marginTop="25dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Dosage: 100Mg"
+                            android:text="MM/DD/YY"
                             android:textStyle="bold"
-                            android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="10sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/Gray"
+                            android:layout_marginLeft="10dp"/>
+
+
 
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="350dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="horizontal"
-                    android:background="@drawable/fade_rg"
+                    android:background="@drawable/fade_bg"
                     android:padding="3dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="15dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -159,38 +152,34 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Place Holder"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Missed dose on "
+                            android:text="Lorem ipsum dolor sit amet..."
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:layout_marginTop="25dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Dosage: NanMg"
+                            android:text="MM/DD/YY"
                             android:textStyle="bold"
-                            android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="10sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/Gray"
+                            android:layout_marginLeft="10dp"/>
+
 
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="350dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="horizontal"
-                    android:background="@drawable/fade_gg"
+                    android:background="@drawable/fade_bg"
                     android:padding="3dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="15dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -199,38 +188,34 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Place Holder"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Last dose on "
+                            android:text="Lorem ipsum dolor sit amet..."
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:layout_marginTop="25dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Dosage: NanMg"
+                            android:text="MM/DD/YY"
                             android:textStyle="bold"
-                            android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="10sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/Gray"
+                            android:layout_marginLeft="10dp"/>
+
 
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="350dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="horizontal"
-                    android:background="@drawable/fade_gg"
+                    android:background="@drawable/fade_bg"
                     android:padding="3dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="15dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -239,26 +224,22 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Place Holder"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Last dose on "
+                            android:text="Lorem ipsum dolor sit amet..."
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:layout_marginTop="25dp"
+                            android:textColor="@color/White"
+                            android:layout_marginLeft="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Dosage: NaNMg"
+                            android:text="MM/DD/YY"
                             android:textStyle="bold"
-                            android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="10sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/Gray"
+                            android:layout_marginLeft="10dp"/>
+
 
                     </LinearLayout>
                 </LinearLayout>
