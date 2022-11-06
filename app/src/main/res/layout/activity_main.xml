@@ -40,35 +40,50 @@
 
             <Button
                 android:id="@+id/button_choke"
-                android:layout_width="319dp"
-                android:layout_height="154dp"
+                android:layout_width="312dp"
+                android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="35dp"
                 android:backgroundTint="@color/RoyalBlue"
                 android:padding="3dp"
                 android:text="Choking"
+                android:textColor="@color/White"
                 android:textSize="40sp" />
 
             <Button
                 android:id="@+id/button_bleed"
-                android:layout_width="319dp"
-                android:layout_height="154dp"
+                android:layout_width="312dp"
+                android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="35dp"
                 android:backgroundTint="@color/EmergencyRed"
                 android:padding="3dp"
                 android:text="Bleeding"
+                android:textColor="@color/White"
                 android:textSize="40sp" />
 
             <Button
                 android:id="@+id/button_breath"
-                android:layout_width="319dp"
-                android:layout_height="154dp"
+                android:layout_width="312dp"
+                android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="35dp"
                 android:backgroundTint="@color/Goldenrod"
                 android:padding="3dp"
                 android:text="Not Breathing"
+                android:textColor="@color/White"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/button_call"
+                android:layout_width="312dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:backgroundTint="@color/LimeGreen"
+                android:padding="3dp"
+                android:text="Call Vet"
+                android:textColor="@color/White"
                 android:textSize="40sp" />
 
         </LinearLayout>

@@ -66,35 +66,38 @@
 
                 <Button
                     android:id="@+id/button_appoitments"
-                    android:layout_width="319dp"
-                    android:layout_height="154dp"
+                    android:layout_width="330dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="60dp"
-                    android:backgroundTint="@color/DarkOliveGreen"
+                    android:backgroundTint="@color/EmergencyRed"
                     android:padding="3dp"
                     android:text="Appoitments"
+                    android:textColor="@color/White"
                     android:textSize="30sp" />
 
                 <Button
                     android:id="@+id/button_medications"
-                    android:layout_width="319dp"
-                    android:layout_height="154dp"
+                    android:layout_width="330dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="60dp"
-                    android:backgroundTint="@color/DarkOliveGreen"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/EmergencyRed"
                     android:padding="3dp"
                     android:text="Medication"
+                    android:textColor="@color/White"
                     android:textSize="30sp" />
 
                 <Button
-                    android:id="@+id/button_other"
-                    android:layout_width="319dp"
-                    android:layout_height="154dp"
+                    android:id="@+id/button_notes"
+                    android:layout_width="330dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="60dp"
-                    android:backgroundTint="@color/DarkOliveGreen"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/EmergencyRed"
                     android:padding="3dp"
-                    android:text="Other"
+                    android:text="Notes"
+                    android:textColor="@color/White"
                     android:textSize="40sp" />
 
             </LinearLayout>
