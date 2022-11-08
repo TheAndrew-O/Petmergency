@@ -7,15 +7,15 @@
     tools:context=".medication">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:id="@+id/app_bar_layout">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width = "match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
             android:background="@color/EmergencyRed"
-            android:layout_height = "?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_profile"
             app:title=" ">
 
@@ -23,33 +23,66 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:src="@drawable/dog_icon">
-            </ImageView>
+                android:src="@drawable/dog_icon" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="60dp">
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/"
+                android:paddingLeft="20dp"
+                android:text="Medication"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/arrow"
+                />
+        </LinearLayout>
+
+
+        <!-- Add CalendarView to display the Calendar -->
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Medication"
-            android:textSize="50dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-black">
-        </TextView>
+            android:layout_marginTop="10dp" />
+
+
+
         <Button
+            android:id="@+id/add_med"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:id="@+id/add_med"
-            android:text="Add medication"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/EmergencyRed"
             android:drawableLeft="@drawable/ic_add"
-            android:backgroundTint="@color/EmergencyRed"/>
+            android:text="Add medication" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -62,42 +95,47 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="350dp"
                         android:layout_height="100dp"
-                        android:orientation="horizontal"
+                        android:layout_gravity="center"
                         android:background="@drawable/fade_yg"
-                        android:padding="3dp"
-                        android:layout_gravity="center">
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Apoquel"
-                                android:textStyle="bold"
-                                android:textSize="23sp"
+                                android:layout_marginLeft="15dp"
                                 android:layout_marginTop="10dp"
+                                android:text="Apoquel"
                                 android:textColor="@color/White"
-                                android:layout_marginLeft="15dp"/>
+                                android:textSize="23sp"
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
                                 android:text="Next dose on 9/23/22"
-                                android:textStyle="bold"
                                 android:textSize="18sp"
-                                android:layout_marginLeft="15dp"/>
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
                                 android:text="Dosage: 3.6Mg"
-                                android:textStyle="bold"
                                 android:textSize="12sp"
-                                android:layout_marginLeft="15dp"/>
+                                android:textStyle="bold" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -106,39 +144,42 @@
                 <LinearLayout
                     android:layout_width="350dp"
                     android:layout_height="100dp"
-                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/fade_yg"
-                    android:padding="3dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:orientation="horizontal"
+                    android:padding="3dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
                             android:text="Carprofen"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="10dp"
                             android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Next dose on 9/23/22"
-                            android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Dosage: 100Mg"
-                            android:textStyle="bold"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -146,39 +187,42 @@
                 <LinearLayout
                     android:layout_width="350dp"
                     android:layout_height="100dp"
-                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/fade_rg"
-                    android:padding="3dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:orientation="horizontal"
+                    android:padding="3dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Place Holder"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
+                            android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp"
+                            android:text="Place Holder"
                             android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Missed dose on "
-                            android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Dosage: NanMg"
-                            android:textStyle="bold"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -186,39 +230,42 @@
                 <LinearLayout
                     android:layout_width="350dp"
                     android:layout_height="100dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/fade_gg"
-                    android:padding="3dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/fade_gg"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Place Holder"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
+                            android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp"
+                            android:text="Place Holder"
                             android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Last dose on "
-                            android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Dosage: NanMg"
-                            android:textStyle="bold"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -226,39 +273,42 @@
                 <LinearLayout
                     android:layout_width="350dp"
                     android:layout_height="100dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/fade_gg"
-                    android:padding="3dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/fade_gg"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Place Holder"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
+                            android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp"
+                            android:text="Place Holder"
                             android:textColor="@color/White"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Last dose on "
-                            android:textStyle="bold"
                             android:textSize="18sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:text="Dosage: NaNMg"
-                            android:textStyle="bold"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"/>
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </LinearLayout>

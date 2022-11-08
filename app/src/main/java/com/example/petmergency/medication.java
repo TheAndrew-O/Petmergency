@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 
 public class medication extends AppCompatActivity {
 
@@ -19,4 +20,5 @@ public class medication extends AppCompatActivity {
 
         setContentView(R.layout.activity_medication);
     }
+
 }
