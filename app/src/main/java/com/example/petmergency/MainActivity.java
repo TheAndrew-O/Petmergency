@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-
+//import android.widget.Toast;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import androidx.appcompat.widget.Toolbar;
@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openChokeActivity(){
-       Intent intent = new Intent(this, choking.class);
-       startActivity(intent);
+        Intent intent = new Intent(this, choking.class);
+        startActivity(intent);
     }
 
     public void openProfileActivity(){

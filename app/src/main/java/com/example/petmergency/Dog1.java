@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class ProfileActivity extends AppCompatActivity {
+public class Dog1 extends AppCompatActivity {
     private final int GALLERY_REQUEST_CODE = 1000;
     ImageView prof_img;
     private Button open_calendar;
@@ -32,7 +32,7 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_dog1);
 
         prof_img = findViewById(R.id.imgGallery);
         swap_but = findViewById(R.id.switch_profile);
@@ -64,7 +64,7 @@ public class ProfileActivity extends AppCompatActivity {
         open_med.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-             openMedActivity();
+                openMedActivity();
             }
         });
 
