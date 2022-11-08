@@ -2,7 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
         android:startColor="@color/MediumPurple"
-        android:endColor="@color/PeachPuff"/>
+        android:endColor="@color/PeachPuff"
+        android:angle="@integer/config_navAnimTime"/>
     <corners
         android:radius="11dp"/>
 
