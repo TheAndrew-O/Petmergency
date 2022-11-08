@@ -71,7 +71,7 @@
                 android:layout_width="174dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="66dp"
-                android:src="@drawable/ic_profile"/>
+                android:src="@drawable/ic_dog1"/>
 
         </LinearLayout>
 
@@ -82,10 +82,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
+                android:layout_marginLeft="166dp"
                 android:layout_marginTop="2dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Pet"
+                android:text="Rover"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
