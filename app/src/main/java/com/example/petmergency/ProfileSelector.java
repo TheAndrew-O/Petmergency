@@ -1,6 +1,7 @@
 package com.example.petmergency;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.drawable.AnimationDrawable;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Window;
 import android.view.WindowManager;
@@ -10,11 +11,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 public class ProfileSelector extends AppCompatActivity {
     private ImageButton pet1_but;
     private ImageButton pet2_but;
     private ImageButton add_pet_but;
+    private AnimationDrawable anim_background;
+    RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,11 @@ public class ProfileSelector extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_select_profile);
+
+        relativeLayout = (RelativeLayout)findViewById(R.id.select_profile_background);
+        anim_background = (AnimationDrawable)relativeLayout.getBackground();
+        anim_background.setEnterFadeDuration(5000);
+        anim_background.setExitFadeDuration(2000);
 
         pet1_but = findViewById(R.id.dog1);
         pet1_but.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +53,7 @@ public class ProfileSelector extends AppCompatActivity {
         add_pet_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                openNewPetActivity();
                 //Toast.makeText(getApplicationContext(),"Profile Button",Toast.LENGTH_LONG).show();
             }
         });
@@ -58,5 +68,23 @@ public class ProfileSelector extends AppCompatActivity {
     public void openDog1Activity(){
         Intent intent = new Intent(this,Dog1.class);
         startActivity(intent);
+    }
+
+    public void openNewPetActivity(){
+        Intent intent = new Intent(this, CreateProfile.class);
+        startActivity(intent);
+    }
+
+    protected void onResume(){
+        super.onResume();
+        if(anim_background != null && !anim_background.isRunning()){
+            anim_background.start();
+        }
+    }
+    protected void onPause(){
+        super.onPause();
+        if(anim_background != null && !anim_background.isRunning()){
+            anim_background.start();
+        }
     }
 }

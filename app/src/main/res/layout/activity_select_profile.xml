@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/select_profile_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fade_wg"
+    android:background="@drawable/fade_animated"
     tools:context=".ProfileSelector">
 
     <LinearLayout
@@ -44,13 +45,44 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rover"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                android:layout_marginLeft="86dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="King"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                android:layout_marginLeft="136dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
             <ImageButton
                 android:id="@+id/add_pet"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:layout_marginLeft="130dp"
+
                 android:layout_marginTop="30dp"
                 android:background="@drawable/add_profile"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Pet"
+                android:textSize="18sp"
+                android:textColor="@color/Black"/>
         </LinearLayout>
 
     </LinearLayout>
