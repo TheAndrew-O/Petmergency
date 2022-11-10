@@ -65,6 +65,7 @@
     <color name="Crimson">#DC143C</color>
     <color name="PaleVioletRed">#DB7093</color>
     <color name="Goldenrod">#DAA520</color>
+    <color name= "MedicationGreen">#57A31F</color>
     <color name="Orchid">#DA70D6</color>
     <color name="Thistle">#D8BFD8</color>
     <color name="LightGrey">#D3D3D3</color>
@@ -81,6 +82,7 @@
     <color name="FireBrick">#B22222</color>
     <color name="EmergencyRed">#B11A1A</color>
     <color name="PowderBlue">#B0E0E6</color>
+    <color name="AddButtonBlue">#1394C4</color>
     <color name="LightSteelBlue">#B0C4DE</color>
     <color name="PaleTurquoise">#AFEEEE</color>
     <color name="GreenYellow">#ADFF2F</color>

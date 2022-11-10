@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <style name="CalenderViewCustom">
+        <item name="colorAccent">@color/EmergencyRed</item>
+        <item name="colorPrimary">@color/White</item>
+    </style>
+</resources>
+
+

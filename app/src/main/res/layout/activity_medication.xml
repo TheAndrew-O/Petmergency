@@ -33,79 +33,94 @@
         android:layout_marginTop="60dp"
         android:orientation="vertical">
 
-
+        <!--        Medicaiton Title-->
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="320dp"
+                android:layout_width="359dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:fontFamily="@font/"
-                android:paddingLeft="20dp"
+                android:paddingLeft="45dp"
                 android:text="Medication"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
-
+<!--            Arrow-->
             <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginRight="10dp"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
+                android:elevation="10dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/arrow"
-                />
+                android:src="@drawable/rightarrow" />
         </LinearLayout>
 
-
-        <!-- Add CalendarView to display the Calendar -->
+        <!--        Calendar component-->
         <CalendarView
             android:id="@+id/calendar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
+            android:layout_height="322dp"
+            android:layout_marginTop="10dp"
+            android:theme="@style/CalenderViewCustom"
+            />
 
-
-
+        <!--        Add Medication Button-->
         <Button
             android:id="@+id/add_med"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="@color/EmergencyRed"
+            android:layout_width="214dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/AddButtonBlue"
             android:drawableLeft="@drawable/ic_add"
-            android:text="Add medication" />
+            android:text="Add medication"
+            android:textStyle="italic" />
+
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <!--Medication Itemlist-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
                 android:orientation="vertical">
-
+                <!--Incoming Medication(Yellow)-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+                    <!--             Clock Icon-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/clock" />
+
+                    </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="350dp"
-                        android:layout_height="100dp"
+                        android:layout_width="320dp"
+                        android:layout_height="90dp"
                         android:layout_gravity="center"
                         android:background="@drawable/fade_yg"
                         android:orientation="horizontal"
                         android:padding="3dp">
-
+                        <!--                     Text Section of Medicaiton Item-->
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -114,204 +129,241 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginTop="10dp"
-                                android:text="Apoquel"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Augmentin(Ear Infection)"
                                 android:textColor="@color/White"
-                                android:textSize="23sp"
+                                android:textSize="22sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:text="Next dose on 9/23/22"
+                                android:layout_marginStart="15dp"
+                                android:text="Dosage: 10.0Mg"
+                                android:textColor="@color/White"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Date: 12/10/2022"
+                                android:textColor="@color/White"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:text="Dosage: 3.6Mg"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
 
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
+                <!--Complete Medication(Green)-->
                 <LinearLayout
-                    android:layout_width="350dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/fade_yg"
-                    android:orientation="horizontal"
-                    android:padding="3dp">
-
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <!--             Clock Icon-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/checkmark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/fade_gg"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+                        <!-- Text Section of Medicaiton Item-->
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Carprofen"
-                            android:textColor="@color/White"
-                            android:textSize="23sp"
-                            android:textStyle="bold" />
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Next dose on 9/23/22"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Famotidine(Stomach)"
+                                android:textColor="@color/White"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Dosage: 100Mg"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Dosage: 20.0Mg"
+                                android:textColor="@color/White"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Date: 9/23/2022"
+                                android:textColor="@color/White"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
+                <!--Missed Medication(Red)-->
                 <LinearLayout
-                    android:layout_width="350dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/fade_rg"
-                    android:orientation="horizontal"
-                    android:padding="3dp">
-
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <!--             Clock Icon-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/xmark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/fade_rg"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+                        <!-- Text Section of Medicaiton Item-->
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Place Holder"
-                            android:textColor="@color/White"
-                            android:textSize="23sp"
-                            android:textStyle="bold" />
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Missed dose on "
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Famotidine(Stomach)"
+                                android:textColor="@color/White"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Dosage: NanMg"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Dosage: 20.0Mg"
+                                android:textColor="@color/White"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Date: 9/12/2022"
+                                android:textColor="@color/White"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
+                <!--Missed Medication(Red)-->
                 <LinearLayout
-                    android:layout_width="350dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/fade_gg"
-                    android:orientation="horizontal"
-                    android:padding="3dp">
-
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <!--             Clock Icon-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Place Holder"
-                            android:textColor="@color/White"
-                            android:textSize="23sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Last dose on "
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Dosage: NanMg"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/xmark" />
 
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="350dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/fade_gg"
-                    android:orientation="horizontal"
-                    android:padding="3dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
+                        android:layout_width="320dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/fade_rg"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+                        <!-- Text Section of Medicaiton Item-->
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Place Holder"
-                            android:textColor="@color/White"
-                            android:textSize="23sp"
-                            android:textStyle="bold" />
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Last dose on "
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Famotidine(Stomach)"
+                                android:textColor="@color/White"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:text="Dosage: NaNMg"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Dosage: 20.0Mg"
+                                android:textColor="@color/White"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Date: 8/20/2022"
+                                android:textColor="@color/White"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
+
 
             </LinearLayout>
 
