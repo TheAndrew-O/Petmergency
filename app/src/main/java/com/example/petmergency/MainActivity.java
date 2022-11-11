@@ -65,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openNotBreathingActivity(){
+        Intent intent = new Intent(this, notBreathing.class);
+        startActivity(intent);
+    }
+
+    public void openBleedingActivity(){
+        Intent intent = new Intent(this, bleeding.class);
+        startActivity(intent);
+    }
+
     public void openProfileActivity(){
         Intent intent2 = new Intent(this, ProfileActivity.class);
         startActivity(intent2);
