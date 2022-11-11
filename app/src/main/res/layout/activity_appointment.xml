@@ -49,7 +49,7 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-<!--            Arrow-->
+            <!--            Arrow-->
             <ImageButton
                 android:layout_width="55dp"
                 android:layout_height="match_parent"
@@ -67,8 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="322dp"
             android:layout_marginTop="10dp"
-            android:theme="@style/CalenderViewCustom"
-            />
+            android:theme="@style/CalenderViewCustom" />
 
         <!--        Add Medication Button-->
         <Button
@@ -89,23 +88,22 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:paddingTop="15dp"
-                android:paddingBottom="5dp"
-                android:orientation="vertical">
+                android:paddingBottom="5dp">
                 <!--Single Event Section-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/AppointmentBlue"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
+                        android:background="@color/AppointmentBlue"
                         android:orientation="horizontal"
 
                         android:padding="3dp">
@@ -133,6 +131,7 @@
                                 android:textColor="@color/White"
                                 android:textSize="17dp"
                                 android:textStyle="normal" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -142,6 +141,7 @@
                                 android:textColor="@color/White"
                                 android:textSize="17dp"
                                 android:textStyle="normal" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -151,6 +151,7 @@
                                 android:textColor="@color/White"
                                 android:textSize="17dp"
                                 android:textStyle="normal" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -167,16 +168,10 @@
                 </LinearLayout>
 
 
-                    </LinearLayout>
-                </LinearLayout>
-
-
-
             </LinearLayout>
 
 
         </ScrollView>
-
 
 
     </LinearLayout>
