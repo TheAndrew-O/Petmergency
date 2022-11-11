@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appointments">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/EmergencyRed"
+            app:navigationIcon="@drawable/ic_profile"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dog_icon" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <!--        Medicaiton Title-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="359dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="43dp"
+                android:text="Appointments"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+<!--            Arrow-->
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:elevation="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rightarrow" />
+        </LinearLayout>
+
+        <!--        Calendar component-->
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="322dp"
+            android:layout_marginTop="10dp"
+            android:theme="@style/CalenderViewCustom"
+            />
+
+        <!--        Add Medication Button-->
+        <Button
+            android:id="@+id/add_med"
+            android:layout_width="214dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/AddButtonBlue"
+            android:drawableLeft="@drawable/ic_add"
+            android:text="Add Appointment"
+            android:textStyle="italic" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Event Itemlist-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
+                android:orientation="vertical">
+                <!--Single Event Section-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/AppointmentBlue"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal"
+
+                        android:padding="3dp">
+                        <!--                     Text Section of Appointment Item-->
+                        <LinearLayout
+                            android:layout_width="330dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="Event Type: "
+                                android:textColor="@color/White"
+                                android:textSize="17dp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+
+                                android:text="Date: "
+                                android:textColor="@color/White"
+                                android:textSize="17dp"
+                                android:textStyle="normal" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+
+                                android:text="Time: "
+                                android:textColor="@color/White"
+                                android:textSize="17dp"
+                                android:textStyle="normal" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+
+                                android:text="Location: "
+                                android:textColor="@color/White"
+                                android:textSize="17dp"
+                                android:textStyle="normal" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+
+                                android:text="Description: "
+                                android:textColor="@color/White"
+                                android:textSize="17dp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

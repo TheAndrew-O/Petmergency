@@ -107,14 +107,14 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_appoitments"
+                    android:id="@+id/button_appointment"
                     android:layout_width="330dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="30dp"
                     android:backgroundTint="@color/EmergencyRed"
                     android:padding="3dp"
-                    android:text="Appoitments"
+                    android:text="Appointment"
                     android:textColor="@color/White"
                     android:textSize="30sp" />
 

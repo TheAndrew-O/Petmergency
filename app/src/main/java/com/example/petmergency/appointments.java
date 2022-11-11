@@ -2,15 +2,11 @@ package com.example.petmergency;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.CalendarView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
-public class medication extends AppCompatActivity {
+public class appointments extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,13 +16,9 @@ public class medication extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
-        setContentView(R.layout.activity_medication);
+        setContentView(R.layout.activity_appointment);
 
     }
-
-
-
-
 
 
 }
