@@ -4,17 +4,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.provider.CalendarContract;
-import android.provider.MediaStore;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -54,7 +51,7 @@ public class Dog3 extends AppCompatActivity {
             }
         });
 
-        open_calendar = findViewById(R.id.button_appoitments);
+        open_calendar = findViewById(R.id.button_appointment);
         open_calendar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

@@ -107,7 +107,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_appoitments"
+                    android:id="@+id/button_appointment"
                     android:layout_width="330dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
