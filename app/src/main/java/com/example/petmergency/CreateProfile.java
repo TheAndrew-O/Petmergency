@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -18,6 +19,7 @@ public class CreateProfile extends AppCompatActivity {
 
     private final int GALLERY_REQUEST_CODE = 1000;
     ImageView prof_img;
+    private ImageButton exit;
     private Button create_prof_but;
     private AnimationDrawable anim_background;
 //    RelativeLayout relativeLayout;
@@ -54,6 +56,15 @@ public class CreateProfile extends AppCompatActivity {
                 openPetProfile();
             }
         });
+
+        exit = findViewById(R.id.go_home);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMainActicity();
+            }
+        });
+
     }
 
     @Override
@@ -65,6 +76,11 @@ public class CreateProfile extends AppCompatActivity {
                 prof_img.setImageURI(data.getData());
             }
         }
+    }
+
+    public void openMainActicity(){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 
     public void openPetProfile(){

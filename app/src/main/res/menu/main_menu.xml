@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_profile" android:title="Profile"
+            android:icon="@drawable/ic_profile"/>
+        <item android:id="@+id/nav_med" android:title="Medication"
+            android:icon="@drawable/ic_baseline_medical_services_24"/>
+        <item android:id="@+id/nav_notes" android:title="Notes"
+            android:icon="@drawable/ic_baseline_calendar_month_24"/>
+        <item android:id="@+id/nav_appoitments" android:title="Appoitments"
+            android:icon="@drawable/ic_baseline_notes_24"/>
+    </group>
+</menu>
