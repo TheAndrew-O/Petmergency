@@ -2,30 +2,30 @@ package com.example.petmergency;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 //import android.widget.Toast;
-import android.os.Bundle;
 import android.widget.ImageButton;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
 
 public class MainActivity extends AppCompatActivity {
     private Button choke_but;
+    private Button bleed_but;
     private Button call_but;
     private ImageButton profile_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+//        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+//        getSupportActionBar().hide(); // hide the title bar
+//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_main);
 
         choke_but = findViewById(R.id.button_choke);
@@ -34,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 openChokeActivity();
             }
+        });
+
+        bleed_but = findViewById(R.id.button_bleed);
+        bleed_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                openBleedActivity();
+            }
+
         });
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -62,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openChokeActivity(){
         Intent intent = new Intent(this, choking.class);
+        startActivity(intent);
+    }
+
+    public void openBleedActivity(){
+        Intent intent = new Intent(this, Bleeding.class);
         startActivity(intent);
     }
 

@@ -41,6 +41,9 @@
             android:name=".choking"
             android:exported="false" />
         <activity
+            android:name=".Bleeding"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">

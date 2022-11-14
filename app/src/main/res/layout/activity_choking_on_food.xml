@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".choking">
+    tools:context=".ChokingOnFood">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,11 +17,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="455dp"
+                android:layout_width="319dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:src="@drawable/choke"
-                app:srcCompat="@drawable/dogchoking_foreground" />
+                android:padding="3dp"
+                android:src="@drawable/choke" />
 
             <LinearLayout
                 android:layout_width="319dp"
@@ -54,11 +54,12 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
+                android:padding="3dp"
                 android:src="@drawable/breathing" />
 
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="426dp"
+                android:layout_height="338dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:background="@drawable/fade_bg"
@@ -67,16 +68,15 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:paddingBottom="72dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Step 3: If you can't remove the object or your pet collapses, place both hands on the side of your pet's rib cage and apply firm quick pressure, or lay your pet on its side and strike the rib cage firmly with the palm of your hand 3-4 times. Keep repeating this until the object is dislodged or until you arrive at the veterinarian's office."
                     android:textColor="@color/black"
                     android:textSize="20sp"
