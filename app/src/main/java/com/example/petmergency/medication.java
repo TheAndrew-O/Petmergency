@@ -3,6 +3,7 @@ package com.example.petmergency;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,13 +18,17 @@ import android.database.Cursor;
 import android.icu.util.Calendar;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+//import android.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 
@@ -34,6 +39,7 @@ public class medication extends AppCompatActivity {
     ArrayList<String> id, name, dosage, date;
     private Button add_med;
     CustomAdapter customAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,24 @@ public class medication extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
         setContentView(R.layout.activity_medication);
+
+//        Toolbar toolbar = findViewById(R.id.toolbar_med);
+//        setSupportActionBar(toolbar);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //openMenu(view);
+//            }
+//        });
+        ImageView menu_but = findViewById(R.id.menu_open);
+        menu_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMenu(view);
+            }
+        });
+
+
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
 //            NotificationChannel channel = new NotificationChannel("WHAT","MEDICATIONS",NotificationManager.IMPORTANCE_DEFAULT);
@@ -101,6 +125,37 @@ public class medication extends AppCompatActivity {
         customAdapter = new CustomAdapter(medication.this, this, id, name, dosage, date);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(medication.this));
+    }
+
+    private void openMenu(View v) {
+        PopupMenu popupMenu = new PopupMenu(medication.this, v);
+        popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId() == R.id.nav_appoitments){
+                    Toast.makeText(medication.this, "You Clicked appoitments", Toast.LENGTH_SHORT);
+                }
+                if(item.getItemId() == R.id.nav_notes){
+                    Intent intent = new Intent(medication.this,Notes.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_profile){
+                    Intent intent = new Intent(medication.this, ProfileActivity.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_med){
+                    Intent intent = new Intent(medication.this, medication.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_emergency){
+                    Intent intent = new Intent(medication.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return false;
+            }
+        });
+        popupMenu.show();
     }
 
     @Override
