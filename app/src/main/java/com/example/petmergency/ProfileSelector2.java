@@ -13,9 +13,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
-public class ProfileSelector extends AppCompatActivity {
+public class ProfileSelector2 extends AppCompatActivity {
     private ImageButton pet1_but;
-    private ImageButton pet2_but;
+    private ImageButton pet2_but, pet3_but;
     private ImageButton add_pet_but;
     private AnimationDrawable anim_background;
     RelativeLayout relativeLayout;
@@ -26,7 +26,7 @@ public class ProfileSelector extends AppCompatActivity {
 //        getSupportActionBar().hide(); // hide the title bar
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 //                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-        setContentView(R.layout.activity_select_profile);
+        setContentView(R.layout.activity_profile_selector2);
 
         relativeLayout = (RelativeLayout)findViewById(R.id.select_profile_background);
         anim_background = (AnimationDrawable)relativeLayout.getBackground();
@@ -49,6 +49,14 @@ public class ProfileSelector extends AppCompatActivity {
             }
         });
 
+        pet3_but = findViewById(R.id.dog3);
+        pet3_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDog3Activity();
+            }
+        });
+
         add_pet_but = findViewById(R.id.add_pet);
         add_pet_but.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +75,11 @@ public class ProfileSelector extends AppCompatActivity {
 
     public void openDog1Activity(){
         Intent intent = new Intent(this,Dog1.class);
+        startActivity(intent);
+    }
+
+    public void openDog3Activity(){
+        Intent intent = new Intent(this,Dog3.class);
         startActivity(intent);
     }
 

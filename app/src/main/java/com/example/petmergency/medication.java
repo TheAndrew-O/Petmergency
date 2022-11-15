@@ -44,10 +44,10 @@ public class medication extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
-        getSupportActionBar().hide(); // hide the title bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+//        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+//        getSupportActionBar().hide(); // hide the title bar
+//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
         setContentView(R.layout.activity_medication);
 
@@ -134,7 +134,7 @@ public class medication extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(medication.this, "You Clicked appoitments", Toast.LENGTH_SHORT);
+                    Toast.makeText(medication.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
                 }
                 if(item.getItemId() == R.id.nav_notes){
                     Intent intent = new Intent(medication.this,Notes.class);
