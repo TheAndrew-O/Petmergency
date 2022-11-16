@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "749923002060",
-    "project_id": "petmergency-899cf",
-    "storage_bucket": "petmergency-899cf.appspot.com"
+    "project_number": "998104472802",
+    "project_id": "petmergency-efb5b",
+    "storage_bucket": "petmergency-efb5b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:749923002060:android:0b28e8426f1afeec26c469",
+        "mobilesdk_app_id": "1:998104472802:android:e9345a0da9ca5ab99652bb",
         "android_client_info": {
           "package_name": "com.example.petmergency"
         }
       },
       "oauth_client": [
         {
-          "client_id": "749923002060-occq205o2u4jv68ht8n7kql7jfcli71b.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.petmergency",
-            "certificate_hash": "c758cb1f8b0c0d554c5def30ed5c6fa6434a2249"
-          }
-        },
-        {
-          "client_id": "749923002060-o1s75qflj3skiph0d788o70kvdf12mj1.apps.googleusercontent.com",
+          "client_id": "998104472802-2a3ft81lcfb6cdlptvb1lcl99dcu1iub.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8gNbIvKvrGW962TfaRCY4DNGgbvkblxg"
+          "current_key": "AIzaSyAW87JxrNSMqFfPnnmvr4XiwYTmTCg45LQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "749923002060-o1s75qflj3skiph0d788o70kvdf12mj1.apps.googleusercontent.com",
+              "client_id": "998104472802-2a3ft81lcfb6cdlptvb1lcl99dcu1iub.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

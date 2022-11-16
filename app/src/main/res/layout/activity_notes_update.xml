@@ -12,7 +12,7 @@
         android:text="Update your task"
         android:gravity="center"
         android:background="@color/EmergencyRed"
-        android:textColor="#fff"
+        android:textColor="@color/white"
         android:padding="10dp"
         android:textSize="18sp"
         android:textStyle="bold"/>
@@ -23,37 +23,25 @@
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2">
 
-            <TextView
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4">
+
+            <EditText
+                android:id="@+id/mEditTextNote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="Note"
-                android:textColor="#000"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4">
-            <EditText
-                android:id="@+id/mEditTextNote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="Note"
-                android:textStyle="bold"
-                android:textColor="#000"
+                android:textColor="@color/Black"
                 android:textColorHint="#000"
-                android:layout_margin="10dp"/>
-        </RelativeLayout>
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -62,21 +50,9 @@
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:layout_margin="10dp"/>
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="4">
             <EditText
@@ -88,7 +64,7 @@
                 android:textColor="#000"
                 android:textColorHint="#000"
                 android:layout_margin="10dp"/>
-        </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -101,17 +77,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2">
+
             <Button
                 android:id="@+id/btnDelete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/EmergencyRed"
                 android:text="Delete"
                 android:textAllCaps="false"
-                android:background="@color/EmergencyRed"
                 android:textColor="#fff"
                 android:textSize="17sp"
-                android:textStyle="bold"
-                android:layout_margin="10dp"/>
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
