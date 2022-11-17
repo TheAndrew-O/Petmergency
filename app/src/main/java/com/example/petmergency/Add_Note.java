@@ -1,7 +1,6 @@
 package com.example.petmergency;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class Add_Note extends AppCompatActivity {
