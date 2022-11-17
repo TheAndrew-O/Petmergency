@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,12 +15,14 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +43,7 @@ import java.util.Date;
 public class Notes extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    ImageView menu_but;
     NotesDatabaseHelper notesdb;
     ArrayList<String> id, notes, desc, date;
     CustomAdapterNotes customAdapterNotes;
@@ -67,6 +71,15 @@ public class Notes extends AppCompatActivity {
 
         setContentView(R.layout.activity_notes_main);
 
+        menu_but = findViewById(R.id.menu_open);
+        menu_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Notes.this, "CLICKED",Toast.LENGTH_SHORT).show();
+                openMenu(view);
+            }
+        });
+
         recyclerView = findViewById(R.id.notes_recyclerView);
 
 //        mUser = mAuth.getCurrentUser();
@@ -74,6 +87,7 @@ public class Notes extends AppCompatActivity {
 //        reference = FirebaseDatabase.getInstance().getReference().child("notes").child(onlineUserID);
 //
 //        loader = new ProgressDialog(this);
+
 
         addNoteButton = findViewById(R.id.addNoteBtn);
         addNoteButton.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +107,7 @@ public class Notes extends AppCompatActivity {
         customAdapterNotes = new CustomAdapterNotes(Notes.this, this, id, notes, desc);
         recyclerView.setAdapter(customAdapterNotes);
         recyclerView.setLayoutManager(new LinearLayoutManager(Notes.this));
+
     }
 
     void SetData() {
@@ -115,6 +130,37 @@ public class Notes extends AppCompatActivity {
         if(requestCode == 1){
             recreate();
         }
+    }
+
+    private void openMenu(View v) {
+        PopupMenu popupMenu = new PopupMenu(Notes.this, v);
+        popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId() == R.id.nav_appoitments){
+                    Toast.makeText(Notes.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                }
+                if(item.getItemId() == R.id.nav_notes){
+                    Intent intent = new Intent(Notes.this,Notes.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_profile){
+                    Intent intent = new Intent(Notes.this, Dog3.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_med){
+                    Intent intent = new Intent(Notes.this, medication.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_emergency){
+                    Intent intent = new Intent(Notes.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return false;
+            }
+        });
+        popupMenu.show();
     }
 
 //    private void addNote() {

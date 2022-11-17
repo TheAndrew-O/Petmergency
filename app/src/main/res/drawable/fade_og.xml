@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
-        android:startColor="@color/MediumPurple"
-        android:endColor="@color/purple_200"
+        android:startColor="@color/DarkOrange"
+        android:endColor="@color/Orange"
         android:angle="@integer/config_navAnimTime"/>
     <corners
         android:radius="11dp"/>

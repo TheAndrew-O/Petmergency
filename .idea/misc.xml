@@ -6,7 +6,14 @@
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable-anydpi/ic_profile.xml" value="0.4715" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.391" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/add_profile.xml" value="0.313" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/bite_button_layout.xml" value="0.226" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/bleed_button.xml" value="0.345" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/broken_bone_layout.xml" value="0.345" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/burn_layout.xml" value="0.345" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/call_vet_button.xml" value="0.4685" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/cardiac_layout.xml" value="0.345" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/choke_but.xml" value="0.314" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/choking_button.xml" value="0.4845" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/circle_image.xml" value="0.313" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/circular.xml" value="0.313" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/circular2.xml" value="0.313" />
@@ -17,22 +24,30 @@
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_center.xml" value="0.4615" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_end.xml" value="0.4615" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_gg.xml" value="0.2915" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_og.xml" value="0.345" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_pg.xml" value="0.314" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_pinkg.xml" value="0.345" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_rg.xml" value="0.4185" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_rog.xml" value="0.345" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_start.xml" value="0.4615" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_wg.xml" value="0.313" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/fade_yg.xml" value="0.4185" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/heat_stroke_layout.xml" value="0.345" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_add.xml" value="0.4715" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.4715" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.2505" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.4685" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.5025" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.4845" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_baseline_phone_in_talk_24.xml" value="0.2505" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4715" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_menu_camera.xml" value="0.314" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.314" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.314" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/ic_profile_black.xml" value="0.462" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/poison_button_layout.xml" value="0.226" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/side_nav_bar.xml" value="0.314" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/drawable/uncon_button_layout.xml" value="0.345" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/font/font.xml" value="0.5791666666666667" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_add_medication.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_add_note.xml" value="0.55" />
@@ -47,7 +62,7 @@
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_not_breathing.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes.xml" value="0.33" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_input.xml" value="0.55" />
-        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_main.xml" value="0.55" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_main.xml" value="0.33" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_retrieve.xml" value="0.5232774674115456" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_update.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_prof.xml" value="0.2898550724637681" />
@@ -69,6 +84,7 @@
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/toolbar1.xml" value="0.5489583333333333" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/toolbar2.xml" value="0.5489583333333333" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/toolbar3.xml" value="0.5489583333333333" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/toolbar_main_menu.xml" value="0.33" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/menu/activity_main_drawer.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/menu/main_menu.xml" value="0.55" />
       </map>

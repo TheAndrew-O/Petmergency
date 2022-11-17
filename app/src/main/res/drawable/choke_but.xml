@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/RoyalBlue"/>
-
-    <corners android:radius="10dp"/>
-
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/fade_bg"/>
+    <item android:drawable="@drawable/bark" android:gravity="center"
+        android:height="90dp" android:width="90dp"/>
+    <item android:drawable="@drawable/ic_baseline_chevron_right_24" android:height="25dp"
+        android:width="25dp" android:left="25dp" android:top="20dp"/>
+</layer-list>

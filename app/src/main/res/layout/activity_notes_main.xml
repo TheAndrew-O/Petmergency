@@ -4,29 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".medication">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:id="@+id/app_bar_layout">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width = "match_parent"
-            android:background="@color/EmergencyRed"
-            android:layout_height = "?attr/actionBarSize"
-            app:navigationIcon="@drawable/ic_profile"
-            app:title=" ">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/dog_icon">
-            </ImageView>
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+    tools:context=".Notes">
+    <include layout="@layout/toolbar3"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addNoteBtn"
@@ -39,6 +18,7 @@
         app:backgroundTint="@color/EmergencyRed"/>
 
     <ScrollView
+        android:layout_marginVertical="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -46,7 +26,6 @@
             android:id="@+id/notes_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="?attr/actionBarSize"
             android:orientation="vertical"/>
 
     </ScrollView>

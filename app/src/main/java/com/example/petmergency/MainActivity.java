@@ -17,6 +17,10 @@ import android.view.WindowManager;
 //import android.widget.Toast;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
@@ -47,12 +51,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        ImageView menu_but = findViewById(R.id.menu_open);
+        menu_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openProfileActivity();
+                openMenu(view);
             }
         });
 
@@ -99,6 +102,37 @@ public class MainActivity extends AppCompatActivity {
     public void openProfileActivity(){
         Intent intent2 = new Intent(this, ProfileActivity.class);
         startActivity(intent2);
+    }
+
+    private void openMenu(View v) {
+        PopupMenu popupMenu = new PopupMenu(MainActivity.this, v);
+        popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId() == R.id.nav_appoitments){
+                    Toast.makeText(MainActivity.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                }
+                if(item.getItemId() == R.id.nav_notes){
+                    Intent intent = new Intent(MainActivity.this,Notes.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_profile){
+                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_med){
+                    Intent intent = new Intent(MainActivity.this, medication.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_emergency){
+                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return false;
+            }
+        });
+        popupMenu.show();
     }
 
 

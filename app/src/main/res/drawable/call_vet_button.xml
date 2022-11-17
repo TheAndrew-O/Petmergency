@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/fade_gg"/>
+    <item android:drawable="@drawable/ic_baseline_phone_in_talk_24" android:gravity="center"
+        android:left="2dp" android:height="70dp" android:width="70dp"/>
+</layer-list>

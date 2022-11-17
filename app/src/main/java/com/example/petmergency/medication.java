@@ -141,7 +141,7 @@ public class medication extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_profile){
-                    Intent intent = new Intent(medication.this, ProfileActivity.class);
+                    Intent intent = new Intent(medication.this, Dog3.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_med){
