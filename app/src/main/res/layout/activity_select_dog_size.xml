@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectDogSize">
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center"
+        android:orientation="vertical">
+        <Button
+            android:layout_marginTop="100dp"
+            android:id="@+id/smallDog"
+            android:layout_width="312dp"
+            android:layout_height="95dp"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:text="Small Dog"/>
+        <Button
+            android:layout_marginTop="100dp"
+            android:id="@+id/largeDog"
+            android:layout_width="312dp"
+            android:layout_height="95dp"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:text="Larger Dog"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

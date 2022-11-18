@@ -31,6 +31,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
     private Button choke_but;
     private Button call_but;
+    private Button bleed_but;
     private ImageButton profile_button;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -72,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(call);
             }
         });
+
+        bleed_but = findViewById(R.id.button_bleed);
+        bleed_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBleedingActivity();
+            }
+        });
     }
 
     private void openMedActivity() {
@@ -85,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openChokeActivity(){
-        Intent intent = new Intent(this, choking.class);
+        Intent intent = new Intent(this, SelectDogSize.class);
         startActivity(intent);
     }
 
@@ -95,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openBleedingActivity(){
-        Intent intent = new Intent(this, bleeding.class);
+        Intent intent = new Intent(this, BleedingLocation.class);
         startActivity(intent);
     }
 

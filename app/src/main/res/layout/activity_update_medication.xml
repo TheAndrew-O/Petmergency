@@ -131,6 +131,7 @@
                     android:layout_gravity="center"
                     android:id="@+id/update_medication"
                     android:text="Update"
+                    android:textColor="@color/white"
                     android:textSize="10dp"
                     android:backgroundTint="@color/Navy"/>
 
@@ -147,6 +148,7 @@
                     android:id="@+id/delete_medication"
                     android:text="Delete"
                     android:textSize="10dp"
+                    android:textColor="@color/white"
                     android:backgroundTint="@color/EmergencyRed"/>
             </LinearLayout>
 

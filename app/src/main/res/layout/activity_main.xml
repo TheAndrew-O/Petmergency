@@ -204,7 +204,9 @@
                 android:layout_marginTop="45dp"
                 android:layout_gravity="center"
                 android:background="@drawable/call_vet_button"
+                android:text="Call Vet"
                 android:textColor="@color/White"
+                android:textAllCaps="false"
                 android:textSize="40sp" />
         </LinearLayout>
 
