@@ -17,18 +17,19 @@ public class SelectDogSize extends AppCompatActivity {
 
         small_dog_but = findViewById(R.id.smallDog);
         small_dog_but.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SelectDogSize.this, choking.class);
-                startActivity(intent);
-            }
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(SelectDogSize.this, chokingSmall.class);
+                    startActivity(intent);
+                }
         });
 
         large_dog_but = findViewById(R.id.largeDog);
         large_dog_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(SelectDogSize.this, chokingLarge.class);
+                startActivity(intent);
             }
         });
 

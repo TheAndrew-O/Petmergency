@@ -19,7 +19,7 @@ public class BleedingLocation extends AppCompatActivity {
         torso_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BleedingLocation.this, bleeding.class);
+                Intent intent = new Intent(BleedingLocation.this, bleedingTorso.class);
                 startActivity(intent);
 
             }
@@ -29,6 +29,8 @@ public class BleedingLocation extends AppCompatActivity {
         head_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(BleedingLocation.this, bleedingHead.class);
+                startActivity(intent);
 
             }
         });
@@ -37,6 +39,8 @@ public class BleedingLocation extends AppCompatActivity {
         internal_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(BleedingLocation.this, bleedingInternal.class);
+                startActivity(intent);
 
             }
         });
