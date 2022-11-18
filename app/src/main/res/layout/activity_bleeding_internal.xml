@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bleedingTorso">
+    tools:context=".bleedingInternal">
     <include layout="@layout/toolbar"></include>
 
     <ScrollView
@@ -20,7 +20,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bleeding Torso/Leg"
+                android:text="Bleeding Internal"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textStyle="bold"
@@ -31,14 +31,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Step 1: Restrain the dog if necessary."
+                android:text="Step 1: Keep the dog calm and quiet."
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="310dp"
+                android:layout_height="191dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/fade_rg"
@@ -54,58 +54,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Step 1a: Hold the dog in place so that it cannot move.\n\nStep 1b: If you are unable to hold the dog in place, secure a leash on the dog and tie it around a fixed object.\n\nStep 1c: If the dog is acting aggressive towards you, place a muzzle on the dog to protect yourself."
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Step 2: Treat the wound"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:padding="3dp"
-                android:src="@drawable/wound" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Object is protruding from the wound."
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
-
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/fade_rg"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 2a: If an object is protruding from the wound, do not remove it.\n\nPress clean gauze or cloth over the wound and apply pressure with your hands until the bleeding stops.\nThis should take a minimum of 3 minutes.\n\nIf blood soaks through the dressing, do not remove it. Apply more dressing and continue to apply pressure until the bleeding stops."
+                        android:text="Step 1a: Wrap the dog in a towel or blanket and speak softly and reassuringly.\n\n Step1b: Make sure the dog doesn't move around too much by gently holding it"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
@@ -119,46 +68,14 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:padding="3dp"
-                android:src="@drawable/wrap_wound" />
+                android:src="@drawable/blanket_wrap" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Object is NOT protruding from the wound."
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
-
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/fade_rg"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 2b: Press clean gauze or cloth over the wound and apply pressure with your hands until the bleeding stops.\nThis should take a minimum of 3 minutes.\n\nIf blood soaks through the dressing, do not remove it. Apply more dressing and continue to apply pressure until the bleeding stops.\n\nStep 2C: If the bleeding has stopped, secure the dressing in place by wrapping the wound with gauze or medical tape."
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Step 3: Seek veterinary attention immediately."
+                android:text="Step 2: Seek veterinary attention immediately."
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -181,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textColor="@color/black"
-                        android:text="Step 3a: Ensure the safety of your dog by visiting the vet and having the wound treated professionally."
+                        android:text="Step 2a: Ensure the safety of your dog by visiting the vet and having the wound treated professionally."
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
