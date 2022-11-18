@@ -35,7 +35,7 @@
             android:name=".AddMedication"
             android:exported="false" />
         <activity
-            android:name=".bleeding"
+            android:name=".bleedingTorso"
             android:exported="false" />
         <activity
             android:name=".notBreathing"
@@ -68,7 +68,16 @@
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".choking"
+            android:name=".chokingSmall"
+            android:exported="false" />
+        <activity
+            android:name=".chokingLarge"
+            android:exported="false" />
+        <activity
+            android:name=".bleedingHead"
+            android:exported="false" />
+        <activity
+            android:name=".bleedingInternal"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
