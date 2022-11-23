@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
     private Button choke_but;
     private Button call_but;
     private Button bleed_but;
+    private Button heart_but;
+    private Button shock_but;
+    private Button poison_but;
+    private Button broken_bone_but;
+
     private ImageButton profile_button;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -42,6 +47,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        heart_but = findViewById(R.id.button_heart_attack);
+        heart_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                openHeartAttackActivity();
+            }
+        });
+        shock_but = findViewById(R.id.button_shock);
+        shock_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                openShockActivity();
+            }
+        });
+
+        poison_but = findViewById(R.id.button_poison);
+        poison_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                openPoisonActivity();
+            }
+        });
+
+        broken_bone_but = findViewById(R.id.button_broken_bone);
+        broken_bone_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                openBrokenBoneActivity();
+            }
+        });
 
 
         choke_but = findViewById(R.id.button_choke);
@@ -81,6 +116,26 @@ public class MainActivity extends AppCompatActivity {
                 openBleedingActivity();
             }
         });
+    }
+
+    private void openHeartAttackActivity() {
+        Intent intent = new Intent(this, heartAttack.class);
+        startActivity(intent);
+    }
+
+    private void openShockActivity() {
+        Intent intent = new Intent(this, shock.class);
+        startActivity(intent);
+    }
+
+    private void openPoisonActivity() {
+        Intent intent = new Intent(this, poison.class);
+        startActivity(intent);
+    }
+
+    private void openBrokenBoneActivity() {
+        Intent intent = new Intent(this, BrokenBone.class);
+        startActivity(intent);
     }
 
     private void openMedActivity() {

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choking(Large)"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="30sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:text="Step 1: Gently Restrain the dog to prevent being bitten."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="277dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 1a: Look into the pet's mouth to see if a foreign object is visible.\n\nStep 1b:  If you see an object, gently try to remove it with pliers or tweezers, but be careful not to push the object further down the throat. Don't spend a lot of time trying to remove it if it's not easy to reach—don't delay, and get your pet to a veterinarian immediately.\n"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="319dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/dogchokingfirst" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:text="Step 2: If you can't dislodge the item, perform a Heimlich Maneuver"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="276dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 2a: For larger dogs, you would lay them on their side, and kneel behind their back. Place your closed fist under the hollow under the rib cage and push upward and inward sharply in the direction of the dog’s head. This should force air out of the lungs to help expel the invader. Remove the object once dislodged.\n\nRefer to the image below if unsure how to perform the Heimich Maneuver."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="319dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/heimlichdog" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:text="Step 3: If Your Dog Doesn’t Resume Breathing, Perform CPR"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 3a: By performing rescue breaths and chest compressions, you can help restore your dogs breathing. It may be necessary to continue performing CPR on the way to the vet as well. Should this not work, quickly take your dog to the nearest veterinarian. Be sure to call first to let them know you are coming so they can be prepared to help upon arrival. \n\nRefer to the image below if unsure how to perform the Heimich Maneuver.  "
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:padding="3dp"
+                android:src="@drawable/smalldogcpr" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:text="Step 4:Always take the dog for a follow-up vet visit after a serious choking incident"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="90dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 4a: He or she may have damage to the mouth and throat, or there might be other items that made their way into the digestive tract"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/app_bar_layout2">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_menu"
+            android:layout_width = "match_parent"
+            android:background="@color/EmergencyRed"
+            android:layout_height = "?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dog_icon">
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emerg_call"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/EmergencyRed"
+        android:src="@drawable/ic_baseline_phone_in_talk_24"/>
+
+</RelativeLayout>

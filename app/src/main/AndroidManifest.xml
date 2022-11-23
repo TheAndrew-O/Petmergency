@@ -80,6 +80,18 @@
             android:name=".bleedingInternal"
             android:exported="false" />
         <activity
+            android:name=".BrokenBone"
+            android:exported="false" />
+        <activity
+            android:name=".heartAttack"
+            android:exported="false" />
+        <activity
+            android:name=".poison"
+            android:exported="false" />
+        <activity
+            android:name=".shock"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">

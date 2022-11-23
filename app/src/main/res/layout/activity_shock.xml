@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Shock"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Step 1: Identify symptoms of shock"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 1a: Usually follows severe injury or extreme fright."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Check for the following symptoms listed below:\n\nweak pulse\nshallow breathing\nnervousness\ndazed eyes."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/heartattackfirst" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="Step 2: Contact your veterinary provider right away"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 2a: Contact veterinary provider right away. \nStep 2b: Do your best to keep your pet calm and wrap them in a blanket for transport. Don’t attempt CPR on your dog unless you have been trained to do CPR on canines, as this can cause further damage.   "
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/app_bar_layout2">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_menu"
+            android:layout_width = "match_parent"
+            android:background="@color/EmergencyRed"
+            android:layout_height = "?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dog_icon">
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emerg_call"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/EmergencyRed"
+        android:src="@drawable/ic_baseline_phone_in_talk_24"/>
+
+</RelativeLayout>
