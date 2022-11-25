@@ -3,6 +3,8 @@ package com.example.petmergency;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,42 +13,55 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
-public class BleedingLocation extends AppCompatActivity {
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-    private Button torso_but, head_but, internal_but;
+public class BrokenBone extends AppCompatActivity {
+
+    Button bleeding_but, splint_but, call_vet;
     ImageView menu_but;
+    FloatingActionButton call_emerg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bleeding_location);
+        setContentView(R.layout.activity_broken_bone);
 
-        torso_but = findViewById(R.id.torso_bleeding);
-        torso_but.setOnClickListener(new View.OnClickListener() {
+        bleeding_but = findViewById(R.id.stop_bleeding);
+        bleeding_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BleedingLocation.this, bleedingTorso.class);
+                Intent intent = new Intent(BrokenBone.this, BleedingLocation.class);
                 startActivity(intent);
-
             }
         });
 
-        head_but = findViewById(R.id.head_bleeding);
-        head_but.setOnClickListener(new View.OnClickListener() {
+        splint_but = findViewById(R.id.dog_splint);
+        splint_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BleedingLocation.this, bleedingHead.class);
+                Intent intent = new Intent(BrokenBone.this, LegSplint.class);
                 startActivity(intent);
-
             }
         });
 
-        internal_but = findViewById(R.id.internal_bleeding);
-        internal_but.setOnClickListener(new View.OnClickListener() {
+        call_emerg = findViewById(R.id.emerg_call);
+        call_emerg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BleedingLocation.this, bleedingInternal.class);
-                startActivity(intent);
+                Intent call = new Intent(Intent.ACTION_DIAL);
+                call.setData(Uri.parse("tel:16127460300"));
 
+                startActivity(call);
+            }
+        });
+
+        call_vet = findViewById(R.id.call_vet_bone);
+        call_vet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent call = new Intent(Intent.ACTION_DIAL);
+                call.setData(Uri.parse("tel:16127460300"));
+
+                startActivity(call);
             }
         });
 
@@ -60,28 +75,28 @@ public class BleedingLocation extends AppCompatActivity {
     }
 
     private void openMenu(View view) {
-        PopupMenu popupMenu = new PopupMenu(BleedingLocation.this,view);
+        PopupMenu popupMenu = new PopupMenu(BrokenBone.this,view);
         popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if (item.getItemId() == R.id.nav_appoitments) {
-                    Toast.makeText(BleedingLocation.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BrokenBone.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
                 }
                 if (item.getItemId() == R.id.nav_notes) {
-                    Intent intent = new Intent(BleedingLocation.this, Notes.class);
+                    Intent intent = new Intent(BrokenBone.this, Notes.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_profile) {
-                    Intent intent = new Intent(BleedingLocation.this, Dog3.class);
+                    Intent intent = new Intent(BrokenBone.this, Dog3.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_med) {
-                    Intent intent = new Intent(BleedingLocation.this, medication.class);
+                    Intent intent = new Intent(BrokenBone.this, medication.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_emergency) {
-                    Intent intent = new Intent(BleedingLocation.this, MainActivity.class);
+                    Intent intent = new Intent(BrokenBone.this, MainActivity.class);
                     startActivity(intent);
                 }
                 return false;

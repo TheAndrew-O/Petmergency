@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chokingSmall">
+    tools:context=".HeatStroke">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,32 +15,107 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:orientation="vertical">
+
             <TextView
-                android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choking(Small Dog)"
-                android:textColor="@color/black"
                 android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="30sp"/>
+                android:layout_marginTop="5dp"
+                android:text="Heat Stroke"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Step 1: Check For Signs"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/fade_og"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Signs of a Burn Include:\n\n - Body temperature is greater than 104 degrees.\n - Wobbliness/Dizziness\n - Excessive panting\n - Increased salivation\n - Gums are very red"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Step 2: Get The Dog Someplace Cool"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/fade_og"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Step 2a: Get your dog out of direct heat"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:textAlignment="center"
-                android:text="Step 1: Gently Restrain the dog to prevent being bitten."
+                android:text="Step 3: Cool The Dog Down"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
+
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="277dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/fade_bg"
+                android:background="@drawable/fade_og"
                 android:orientation="horizontal"
+                android:layout_marginTop="30dp"
                 android:padding="3dp">
 
                 <LinearLayout
@@ -52,38 +127,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Step 1a: Look into the pet's mouth to see if a foreign object is visible.\n\nStep 1b:  If you see an object, gently try to remove it with pliers or tweezers, but be careful not to push the object further down the throat. Don't spend a lot of time trying to remove it if it's not easy to reach—don't delay, and get your pet to a veterinarian immediately.\n"
+                        android:text="Step 3a: Wrap the dog in cool/wet towels.\nPlace wet towels over the dog's head, neck, torso, legs.\n\nStep 3b: Use fans to help remove excess heat from the dog.\n\nStep 3c: Provide the dog with drinking water.\n\nStep 3d: Continue until the dog's temperature reaches 102.5 degrees.\n\nDo NOT sumberge the dog in ice water, the rapid change in temperature may cause shock."
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
             </LinearLayout>
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:padding="3dp"
-                android:src="@drawable/dogchokingfirst" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:textAlignment="center"
-                android:text="Step 2: If you can't dislodge the item, perform a Heimlich Maneuver"
+                android:text="Step 4: Go to a Veterinary Hospital"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="276dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="0dp"
-                android:background="@drawable/fade_bg"
+                android:background="@drawable/fade_og"
                 android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="100dp"
                 android:padding="3dp">
 
                 <LinearLayout
@@ -94,52 +163,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 2a: On puppies and small dogs, this means picking them up their head up and paws down, holding its back against your stomach. Then find the soft hollow under the rib cage and push up with your first. \n\nRefer to the image below if unsure how to perform the Heimich Maneuver."
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:padding="3dp"
-                android:src="@drawable/heimlichdog" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:textAlignment="center"
-                android:text="Step 3: If Your Dog Doesn’t Resume Breathing, Perform CPR"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-
-
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="0dp"
-                android:background="@drawable/fade_bg"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 3a:By performing rescue breaths and chest compressions, you can help restore your dogs breathing. It may be necessary to continue performing CPR on the way to the vet as well. Should this not work, quickly take your dog to the nearest veterinarian. Be sure to call first to let them know you are coming so they can be prepared to help upon arrival. \n\nRefer to the image below if unsure how to perform the Heimich Maneuver.  "
+                        android:text="Even if you successfully cool down your dog, some health complications may arise after a few hours or days due to hyperthermia."
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
@@ -147,84 +171,11 @@
             </LinearLayout>
 
 
-
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:padding="3dp"
-                android:src="@drawable/smalldogcpr" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-
-                android:layout_marginTop="50dp"
-                android:textAlignment="center"
-                android:text="Step 4:Always take the dog for a follow-up vet visit after a serious choking incident"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="90dp"
-                android:background="@drawable/fade_bg"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 4a:He or she may have damage to the mouth and throat, or there might be other items that made their way into the digestive tract"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
+    <include layout="@layout/toolbar"/>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:id="@+id/app_bar_layout2">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_menu"
-            android:layout_width = "match_parent"
-            android:background="@color/EmergencyRed"
-            android:layout_height = "?attr/actionBarSize"
-            app:navigationIcon="@drawable/ic_baseline_menu_24"
-            app:title=" ">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/dog_icon">
-            </ImageView>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_profile"
-                android:layout_gravity="end"
-                android:layout_marginRight="10dp"/>
-
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

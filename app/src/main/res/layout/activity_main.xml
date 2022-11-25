@@ -43,7 +43,7 @@
                     android:textSize="40sp" />
 
                 <Button
-                    android:id="@+id/button_breath"
+                    android:id="@+id/button_shock"
                     android:layout_width="95dp"
                     android:layout_height="95dp"
                     android:layout_marginTop="15dp"

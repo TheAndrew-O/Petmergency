@@ -29,7 +29,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    private Button choke_but;
+    private Button choke_but, heart_but, shock_but, poison_but, brokenBone_but, burn_but, heat_but, sting_but;
     private Button call_but;
     private Button bleed_but;
     private ImageButton profile_button;
@@ -79,6 +79,69 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openBleedingActivity();
+            }
+        });
+
+        heart_but = findViewById(R.id.button_cardiac_arrest);
+        heart_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HeartAttack.class);
+                startActivity(intent);
+            }
+        });
+
+        shock_but = findViewById(R.id.button_shock);
+        shock_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Shock.class);
+                startActivity(intent);
+            }
+        });
+
+        poison_but = findViewById(R.id.button_poison);
+        poison_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Poison.class);
+                startActivity(intent);
+            }
+        });
+
+        brokenBone_but = findViewById(R.id.button_broken_bone);
+        brokenBone_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BrokenBone.class);
+                startActivity(intent);
+            }
+        });
+
+        burn_but = findViewById(R.id.button_burn);
+        burn_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Burn.class);
+                startActivity(intent);
+            }
+        });
+
+        heat_but = findViewById(R.id.button_heat_stroke);
+        heat_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HeatStroke.class);
+                startActivity(intent);
+            }
+        });
+
+        sting_but = findViewById(R.id.button_bite);
+        sting_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BugBite.class);
+                startActivity(intent);
             }
         });
     }

@@ -54,11 +54,18 @@
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_appointment.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_bleeding.xml" value="0.33" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_bleeding_location.xml" value="0.39375" />
-        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_choking.xml" value="0.47939124920735576" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_broken_bone.xml" value="0.45012787723785164" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_bug_bite.xml" value="0.42426677380474087" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_burn.xml" value="0.44917056571671626" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_choking.xml" value="0.5" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_choking_small.xml" value="0.3109375" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_create_profile.xml" value="0.5" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_dog1.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_dog3.xml" value="0.5359375" />
-        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_heart_attack.xml" value="0.25" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_heat_stroke.xml" value="0.4689165186500888" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_leg_splint.xml" value="0.4069364161849711" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_medication.xml" value="0.33" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_not_breathing.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes.xml" value="0.33" />
@@ -66,11 +73,13 @@
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_main.xml" value="0.33" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_retrieve.xml" value="0.5232774674115456" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_notes_update.xml" value="0.55" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_poison.xml" value="0.4882108183079057" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_prof.xml" value="0.2898550724637681" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_profile.xml" value="0.5" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_profile_selector2.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_select_dog_size.xml" value="0.55" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_select_profile.xml" value="0.3109375" />
+        <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_shock.xml" value="0.5219970341077608" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_template.xml" value="0.2674772036474164" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_update_medication.xml" value="0.39114583333333336" />
         <entry key="..\:/Users/awsom/AndroidStudioProjects/Petmergency/app/src/main/res/layout/activity_update_notes.xml" value="0.55" />

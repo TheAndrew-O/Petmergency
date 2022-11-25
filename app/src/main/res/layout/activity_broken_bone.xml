@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chokingSmall">
+    tools:context=".BrokenBone">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,74 +15,134 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:orientation="vertical">
+
             <TextView
-                android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choking(Small Dog)"
-                android:textColor="@color/black"
                 android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="30sp"/>
+                android:layout_marginTop="5dp"
+                android:text="Broken Bone"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Step 1: Check For Signs"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/fade_wg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Signs of Broken Bones include:\n\n - Swelling of a certain area\n - Holding up a leg or limping\n - Bone is exposed/visible"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Step 2: Restrain Your Dog"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dog_bone"
+                android:padding="5dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/fade_wg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Severe pain may cause your dog to act hyper-aggressively and bite.\n\nStep 2a: Put a muzzle on the dog.\n\nStep 2b: Place the dog on a hard flat board and try to limit its movement."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:textAlignment="center"
-                android:text="Step 1: Gently Restrain the dog to prevent being bitten."
+                android:text="Step 3: Stop Any External Bleeding"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_height="277dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/fade_bg"
-                android:orientation="horizontal"
-                android:padding="3dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 1a: Look into the pet's mouth to see if a foreign object is visible.\n\nStep 1b:  If you see an object, gently try to remove it with pliers or tweezers, but be careful not to push the object further down the throat. Don't spend a lot of time trying to remove it if it's not easy to reach—don't delay, and get your pet to a veterinarian immediately.\n"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="200dp"
+            <Button
+                android:id="@+id/stop_bleeding"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop Bleeding"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
-                android:padding="3dp"
-                android:src="@drawable/dogchokingfirst" />
+                android:background="@color/EmergencyRed"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:textAlignment="center"
-                android:text="Step 2: If you can't dislodge the item, perform a Heimlich Maneuver"
+                android:text="Step 4: Treating a Closed Wound Leg Fracture"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
-
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="276dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:layout_marginBottom="0dp"
-                android:background="@drawable/fade_bg"
+                android:background="@drawable/fade_wg"
                 android:orientation="horizontal"
                 android:padding="3dp">
 
@@ -94,77 +154,41 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 2a: On puppies and small dogs, this means picking them up their head up and paws down, holding its back against your stomach. Then find the soft hollow under the rib cage and push up with your first. \n\nRefer to the image below if unsure how to perform the Heimich Maneuver."
+                        android:text="Before applying a splint, you should call the vet.\nIf your dog is still able to move, a splint may be unnecessary.\n\nYou should NEVER try to splint an open wound fracture."
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
             </LinearLayout>
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:padding="3dp"
-                android:src="@drawable/heimlichdog" />
 
-            <TextView
+            <Button
+                android:id="@+id/call_vet_bone"
+                android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Call Vet"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:textAlignment="center"
-                android:text="Step 3: If Your Dog Doesn’t Resume Breathing, Perform CPR"
+                android:background="@color/EmergencyRed"/>
+
+            <Button
+                android:id="@+id/dog_splint"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply Leg Splint"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-
-
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="0dp"
-                android:background="@drawable/fade_bg"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 3a:By performing rescue breaths and chest compressions, you can help restore your dogs breathing. It may be necessary to continue performing CPR on the way to the vet as well. Should this not work, quickly take your dog to the nearest veterinarian. Be sure to call first to let them know you are coming so they can be prepared to help upon arrival. \n\nRefer to the image below if unsure how to perform the Heimich Maneuver.  "
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
-
-
-
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:padding="3dp"
-                android:src="@drawable/smalldogcpr" />
+                android:backgroundTint="@color/BlanchedAlmond"/>
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:textAlignment="center"
-                android:text="Step 4:Always take the dog for a follow-up vet visit after a serious choking incident"
+                android:text="Step 5: Go to a Veterinary Hospital Immediately"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
@@ -173,8 +197,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:layout_marginBottom="90dp"
-                android:background="@drawable/fade_bg"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/fade_wg"
                 android:orientation="horizontal"
                 android:padding="3dp">
 
@@ -186,45 +210,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 4a:He or she may have damage to the mouth and throat, or there might be other items that made their way into the digestive tract"
+                        android:text="While moving the dog as little as possible, transport the dog to the veterinary hospital."
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
+    <include layout="@layout/toolbar"/>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:id="@+id/app_bar_layout2">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_menu"
-            android:layout_width = "match_parent"
-            android:background="@color/EmergencyRed"
-            android:layout_height = "?attr/actionBarSize"
-            app:navigationIcon="@drawable/ic_baseline_menu_24"
-            app:title=" ">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/dog_icon">
-            </ImageView>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_profile"
-                android:layout_gravity="end"
-                android:layout_marginRight="10dp"/>
-
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
