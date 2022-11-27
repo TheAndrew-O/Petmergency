@@ -19,7 +19,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Broken Bone"
+                android:text="Exposed Poison"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textStyle="bold"
@@ -30,7 +30,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:textAlignment="center"
-                android:text="Step 1: Remain calm"
+                android:text="Step 1: Identify poison."
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
@@ -52,7 +52,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Step 1a: Gently Restrain the dog to prevent being bitten.\nStep 1b: Move your dog to a safe, indoor location. Understand that the dog is in pain and is very likely to bite. The dog may also be in shock, depending on the severity of the injury. Be careful when trying to move the dog. Gently lay your pet on a flat surface for support."
+                        android:text="Step 1a: If your pet seems stable, try to identify the toxin and how your dog came into contact with it so you can provide as much information to your vet as possible. If, however, your dog appears sick and/or you are not sure how long ago the exposure happened, seek treatment right away to prevent worsening illness. "
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
@@ -63,7 +63,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:padding="3dp"
-                android:src="@drawable/brokenboneone" />
+                android:src="@drawable/dogpoisonone" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:textAlignment="center"
-                android:text="Step 2: Call the emergency vet right away"
+                android:text="Step 2: Try to remove/clean poison "
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
@@ -95,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Step 2a:If you think your dog has broken a bone, she’ll need to be assessed and treated by a professional right away. Your vet will likely schedule an emergency visit for you, but understand that you may need to wait a while to be seen if the vet is booked up for the day already. Write down as much information as you can remember about the cause of the broken bone. Was it a fall? Was your dog struck by something? Is there a possibility of other injuries, or is this the only one?"
+                        android:text="Step 2a: If your pet's skin or eyes are exposed to a toxic product (such as many cleaning products), check the product label for the instructions for people exposed to the product; if the label instructs you to wash your hands with soap and water if you're exposed, then wash your pet's skin with soap and water (don't get any into its eyes, mouth or nose). If the label tells you to flush the skin or eyes with water, do this for your pet as soon as possible (if you can do it safely). "
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
@@ -106,25 +106,24 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:padding="3dp"
-                android:src="@drawable/callvet" />
-
+                android:src="@drawable/poisonedhomedog" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:textAlignment="center"
-                android:text="Step 3: Properly secure dog"
+                android:text="Step 3: Seek professional help"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
-
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="wrap_content"
+                android:layout_height="276dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="0dp"
                 android:background="@drawable/fade_bg"
                 android:orientation="horizontal"
                 android:padding="3dp">
@@ -138,23 +137,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Step 3a: While transporting your injured pet to a veterinarian, use a stretcher (you can use a board or other firm surface as a stretcher, or use a throw rug or blanket as a sling). If possible, secure the pet to the stretcher (make sure you don't put pressure on the injured area or the animal's chest) for transport—this may be as simple as wrapping a blanket around them."
+                        android:text="Step 3a: Your next step is to call for veterinary medical advice, even if your dog is acting normal. You should not wait for your dog to show signs of illness because it may be too late by then. Never give your dog a home remedy or other treatment without speaking with a veterinary professional first. If your family veterinarian's office is open, call them first. If the poisoning occurs after hours, call a nearby veterinary emergency clinic. A veterinary professional will be able to tell you how to proceed. "
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
             </LinearLayout>
-
-
             <ImageView
                 android:layout_width="319dp"
-                android:layout_height="325dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="-50dp"
-
                 android:padding="3dp"
-                android:src="@drawable/wrapdog" />
+                android:layout_marginBottom="80dp"
+                android:src="@drawable/callvet" />
         </LinearLayout>
 
     </ScrollView>

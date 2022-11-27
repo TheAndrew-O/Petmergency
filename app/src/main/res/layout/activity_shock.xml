@@ -76,7 +76,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:padding="3dp"
-                android:src="@drawable/heartattackfirst" />
+                android:src="@drawable/dogshock" />
 
             <TextView
                 android:layout_width="wrap_content"

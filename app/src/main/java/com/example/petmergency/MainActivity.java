@@ -1,29 +1,21 @@
 package com.example.petmergency;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 //import android.widget.Toast;
-import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
@@ -129,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openPoisonActivity() {
-        Intent intent = new Intent(this, poison.class);
+        Intent intent = new Intent(this, SelectPoison.class);
         startActivity(intent);
     }
 

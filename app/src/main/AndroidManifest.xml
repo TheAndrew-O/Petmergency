@@ -86,10 +86,16 @@
             android:name=".heartAttack"
             android:exported="false" />
         <activity
-            android:name=".poison"
+            android:name=".PoisonExpose"
             android:exported="false" />
         <activity
             android:name=".shock"
+            android:exported="false" />
+        <activity
+            android:name=".PoisonConsume"
+            android:exported="false" />
+        <activity
+            android:name=".SelectPoison"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
