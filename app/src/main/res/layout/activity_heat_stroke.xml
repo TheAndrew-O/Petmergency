@@ -176,17 +176,6 @@
     </ScrollView>
     <include layout="@layout/toolbar"/>
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/emerg_call"
-        app:fabSize="normal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:backgroundTint="@color/EmergencyRed"
-        android:src="@drawable/ic_baseline_phone_in_talk_24"/>
+    <include layout="@layout/floating_action_button"/>
 
 </RelativeLayout>

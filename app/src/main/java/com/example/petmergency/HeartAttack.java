@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
@@ -15,8 +17,9 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HeartAttack extends AppCompatActivity {
-
-    FloatingActionButton call_emerg;
+    private FloatingActionButton mainFab, callVetFab, homePageFab, locateVetFab;
+    private Animation fabOpen, fabClose, rotateForward, rotateBackward;
+    private boolean isOpen = false;
     private Button cpr_but;
     ImageView menu_but;
     @Override
@@ -41,10 +44,28 @@ public class HeartAttack extends AppCompatActivity {
             }
         });
 
-        call_emerg = findViewById(R.id.emerg_call);
-        call_emerg.setOnClickListener(new View.OnClickListener() {
+        mainFab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        callVetFab = (FloatingActionButton) findViewById(R.id.call_vet_btn);
+        homePageFab = (FloatingActionButton) findViewById(R.id.home_page_btn);
+        locateVetFab = (FloatingActionButton) findViewById(R.id.locate_vet_btn);
+
+        fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open_anim);
+        fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close_anim);
+        rotateForward = AnimationUtils.loadAnimation(this, R.anim.rotate_forward_anim);
+        rotateBackward = AnimationUtils.loadAnimation(this, R.anim.rotate_backward_anim);
+
+        mainFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                animateFab();
+            }
+        });
+
+        callVetFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                animateFab();
+
                 Intent call = new Intent(Intent.ACTION_DIAL);
                 call.setData(Uri.parse("tel:16127460300"));
 
@@ -52,6 +73,57 @@ public class HeartAttack extends AppCompatActivity {
             }
         });
 
+        homePageFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                animateFab();
+                openMainActivity();
+            }
+        });
+
+        locateVetFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                animateFab();
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Veterinary Hospital");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
+
+
+    }
+
+    private void animateFab() {
+        if (isOpen) {
+            mainFab.startAnimation(rotateForward);
+            callVetFab.startAnimation(fabClose);
+            homePageFab.startAnimation(fabClose);
+            locateVetFab.startAnimation(fabClose);
+
+            callVetFab.setClickable(false);
+            homePageFab.setClickable(false);
+            locateVetFab.setClickable(false);
+
+            isOpen = false;
+        } else {
+            mainFab.startAnimation(rotateBackward);
+            callVetFab.startAnimation(fabOpen);
+            homePageFab.startAnimation(fabOpen);
+            locateVetFab.startAnimation(fabOpen);
+
+            callVetFab.setClickable(true);
+            homePageFab.setClickable(true);
+            locateVetFab.setClickable(true);
+
+            isOpen = true;
+        }
+    }
+
+    public void openMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void openMenu(View view) {
