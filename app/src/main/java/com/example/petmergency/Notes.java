@@ -102,9 +102,10 @@ public class Notes extends AppCompatActivity {
         id = new ArrayList<>();
         notes = new ArrayList<>();
         desc = new ArrayList<>();
+        date = new ArrayList<>();
 
         SetData();
-        customAdapterNotes = new CustomAdapterNotes(Notes.this, this, id, notes, desc);
+        customAdapterNotes = new CustomAdapterNotes(Notes.this, this, id, notes, desc, date);
         recyclerView.setAdapter(customAdapterNotes);
         recyclerView.setLayoutManager(new LinearLayoutManager(Notes.this));
 
@@ -120,6 +121,7 @@ public class Notes extends AppCompatActivity {
                 id.add(cursor.getString(0));
                 notes.add(cursor.getString(1));
                 desc.add(cursor.getString(2));
+                date.add(cursor.getString(3));
             }
         }
     }

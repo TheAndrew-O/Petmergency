@@ -8,10 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class Add_Note extends AppCompatActivity {
 
@@ -32,12 +35,11 @@ public class Add_Note extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 NotesDatabaseHelper notesDatabaseHelper = new NotesDatabaseHelper(Add_Note.this);
-                //Calendar cal = Calendar.getInstance();
-//                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//                //String date = sdf.format(cal.getTime());
-//                LocalDate d = LocalDate.now();
-//                String date = sdf.format(d);
-                notesDatabaseHelper.addNote(note_text.getText().toString().trim(), desc_text.getText().toString().trim());
+                SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                Date date  = Calendar.getInstance().getTime();
+                String format_date = sf.format(date);
+                Toast.makeText(Add_Note.this, format_date, Toast.LENGTH_SHORT).show();
+                notesDatabaseHelper.addNote(note_text.getText().toString().trim(), desc_text.getText().toString().trim(), format_date.toString().trim());
                 Intent intent = new Intent(Add_Note.this, Notes.class);
                 startActivity(intent);
             }

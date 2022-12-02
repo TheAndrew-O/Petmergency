@@ -52,16 +52,7 @@ public class Dog3 extends AppCompatActivity {
         open_calendar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
-                Calendar beginTime = Calendar.getInstance();
-                beginTime.set(2022, 9, 23, 10, 30);
-                Calendar endTime = Calendar.getInstance();
-                endTime.set(2022, 9, 23, 11, 30);
-                calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
-                calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
-                calendarIntent.putExtra(CalendarContract.Events.TITLE, "Pet's Appoitment");
-                calendarIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Location");
-                startActivity(calendarIntent);
+                openAppoitments();
             }
         });
 
@@ -115,6 +106,19 @@ public class Dog3 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openAppoitments(){
+        Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
+        Calendar beginTime = Calendar.getInstance();
+        beginTime.set(2022, 9, 23, 10, 30);
+        Calendar endTime = Calendar.getInstance();
+        endTime.set(2022, 9, 23, 11, 30);
+        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
+        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
+        calendarIntent.putExtra(CalendarContract.Events.TITLE, "Pet's Appoitment");
+        calendarIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Location");
+        startActivity(calendarIntent);
+    }
+
     private void openMenu(View v) {
         PopupMenu popupMenu = new PopupMenu(Dog3.this, v);
         popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
@@ -122,7 +126,7 @@ public class Dog3 extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(Dog3.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    openAppoitments();
                 }
                 if(item.getItemId() == R.id.nav_notes){
                     Intent intent = new Intent(Dog3.this,Notes.class);
