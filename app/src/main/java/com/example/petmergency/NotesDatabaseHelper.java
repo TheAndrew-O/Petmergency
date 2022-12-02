@@ -11,14 +11,14 @@ import androidx.annotation.Nullable;
 
 public class NotesDatabaseHelper extends SQLiteOpenHelper{
     private Context context;
-    private static final String DATABASE_NAME = "notes.db";
+    private static final String DATABASE_NAME = "notes2.db";
     private static final int DATABASE_VERSION = 1;
 
     private static final String TABLE_NAME = "notes_library";
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_NOTES = "note";
     private static final String COLUMN_DESC = "desc";
-    //private static final String COLUMN_DATE = "medication_date";
+    private static final String COLUMN_DATE = "date";
 
     public NotesDatabaseHelper(@Nullable Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -30,7 +30,8 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper{
         String query = "CREATE TABLE " + TABLE_NAME +
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_NOTES + " TEXT, " +
-                COLUMN_DESC + " TEXT);";
+                COLUMN_DESC + " TEXT, " +
+                COLUMN_DATE + " TEXT);";
         sqLiteDatabase.execSQL(query);
     }
 
@@ -40,13 +41,13 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper{
         onCreate(sqLiteDatabase);
     }
 
-    void addNote(String note, String desc){
+    void addNote(String note, String desc, String date){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(COLUMN_NOTES, note);
         cv.put(COLUMN_DESC, desc);
-
+        cv.put(COLUMN_DATE, date);
         long res = db.insert(TABLE_NAME, null, cv);
         if(res == -1){
             Toast.makeText(context, "FAILED",Toast.LENGTH_SHORT).show();
@@ -69,12 +70,12 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper{
         return cursor;
     }
 
-    void updateData(String row_id, String note, String desc){
+    void updateData(String row_id, String note, String desc, String date){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_NOTES, note);
         contentValues.put(COLUMN_DESC, desc);
-
+        contentValues.put(COLUMN_DATE, date);
         long res = db.update(TABLE_NAME, contentValues, "_id=?", new String[]{row_id});
         if(res == -1){
             Toast.makeText(context, "FAILED TO UPDATE", Toast.LENGTH_SHORT).show();

@@ -28,6 +28,7 @@ public class UpdateMedication extends AppCompatActivity implements DatePickerDia
     int _day, _month, _year, _hour, _minute;
     private TextView textView;
     String get_id, old_name, old_dosage, new_date;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -19,16 +19,16 @@ import java.util.ArrayList;
 public class CustomAdapterNotes extends RecyclerView.Adapter<CustomAdapterNotes.MyNotesHolder>{
 
     Context context;
-    ArrayList id, notes, desc;
+    ArrayList id, notes, desc, date;
     Activity activity;
 
-    CustomAdapterNotes(Activity activity, Context context, ArrayList _id, ArrayList _note, ArrayList _desc){
+    CustomAdapterNotes(Activity activity, Context context, ArrayList _id, ArrayList _note, ArrayList _desc, ArrayList _date){
         this.activity = activity;
         this.context = context;
         this.id = _id;
         this.notes = _note;
         this.desc = _desc;
-        //this.date = date;
+        this.date = _date;
     }
 
     @NonNull
@@ -44,7 +44,7 @@ public class CustomAdapterNotes extends RecyclerView.Adapter<CustomAdapterNotes.
 
         holder.note.setText(String.valueOf(notes.get(position)));
         holder.desc.setText(String.valueOf(desc.get(position)));
-        //holder.date.setText(String.valueOf(date.get(position)));
+        holder.date.setText(String.valueOf(date.get(position)));
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +52,7 @@ public class CustomAdapterNotes extends RecyclerView.Adapter<CustomAdapterNotes.
                 intent.putExtra("id",String.valueOf(id.get(position)));
                 intent.putExtra("notes",String.valueOf(notes.get(position)));
                 intent.putExtra("desc",String.valueOf(desc.get(position)));
-                //intent.putExtra("date",String.valueOf(date.get(position)));
+                intent.putExtra("date",String.valueOf(date.get(position)));
                 activity.startActivityForResult(intent,1);
             }
         });
@@ -73,7 +73,7 @@ public class CustomAdapterNotes extends RecyclerView.Adapter<CustomAdapterNotes.
             super(itemView);
             note = itemView.findViewById(R.id.noteTv);
             desc = itemView.findViewById(R.id.descriptionTv);
-            //date = itemView.findViewById(R.id.dateTv);
+            date = itemView.findViewById(R.id.dateTv);
             layout = itemView.findViewById(R.id.note_list);
         }
     }

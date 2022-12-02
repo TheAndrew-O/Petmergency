@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class Update_Notes extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class Update_Notes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_update);
 
-        //date_view = findViewById(R.id.dateTv);
+        date_view = findViewById(R.id.dateTv);
 
         notes_edit = findViewById(R.id.mEditTextNote);
         desc = findViewById(R.id.mEditTextDescription);
@@ -41,12 +43,10 @@ public class Update_Notes extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 NotesDatabaseHelper notesDatabaseHelper = new NotesDatabaseHelper(Update_Notes.this);
-                //Calendar cal = Calendar.getInstance();
-//                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//                //String date = sdf.format(cal.getTime());
-//                LocalDate d = LocalDate.now();
-//                String date = sdf.format(d);
-                notesDatabaseHelper.updateData(_id, notes_edit.getText().toString().trim(), desc.getText().toString().trim());
+                SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                Date date  = Calendar.getInstance().getTime();
+                String format_date = sf.format(date);
+                notesDatabaseHelper.updateData(_id, notes_edit.getText().toString().trim(), desc.getText().toString().trim(), format_date);
                 Intent intent = new Intent(Update_Notes.this, Notes.class);
                 startActivity(intent);
             }
@@ -67,10 +67,11 @@ public class Update_Notes extends AppCompatActivity {
             _id = getIntent().getStringExtra("id");
             _note = getIntent().getStringExtra("notes");
             _desc = getIntent().getStringExtra("desc");
-            //_date = getIntent().getStringExtra("date");
+            _date = getIntent().getStringExtra("date");
             //date_view.setText(_date);
             notes_edit.setText(_note);
             desc.setText(_desc);
+
         }
         else{
             Toast.makeText(this, "NO NOTES",Toast.LENGTH_SHORT).show();
