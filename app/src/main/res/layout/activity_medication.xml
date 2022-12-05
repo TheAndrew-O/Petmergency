@@ -31,7 +31,7 @@
                 android:textStyle="bold" />
 
 <!--            Arrow-->
-            <ImageButton
+            <!--<ImageButton
                 android:id="@+id/right_arrow"
                 android:layout_width="55dp"
                 android:layout_height="match_parent"
@@ -40,7 +40,7 @@
                 android:background="@android:color/transparent"
                 android:elevation="10dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/rightarrow" />
+                android:src="@drawable/rightarrow" />-->
         </LinearLayout>
 
         <!--        Calendar component-->
@@ -49,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="322dp"
             android:layout_marginTop="10dp"
+
             android:theme="@style/CalenderViewCustom"
             />
 

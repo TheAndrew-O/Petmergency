@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -74,12 +75,20 @@ public class chokingSmall extends AppCompatActivity {
             }
         });
 
-        Toolbar toolbar = findViewById(R.id.toolbar_menu);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        ImageView menu_but = findViewById(R.id.menu_open);
+        menu_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openMenu(view);
+            }
+        });
+
+        ImageView prof_but = findViewById(R.id.view_profile);
+        prof_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(chokingSmall.this, ProfileSelector.class);
+                startActivity(intent2);
             }
         });
 

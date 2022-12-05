@@ -73,6 +73,15 @@ public class ProfileActivity extends AppCompatActivity {
                 openMenu(view);
             }
         });
+
+        ImageView prof_but = findViewById(R.id.view_profile);
+        prof_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(ProfileActivity.this, ProfileSelector2.class);
+                startActivity(intent2);
+            }
+        });
     }
 
     @Override
@@ -87,7 +96,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void openMedActivity() {
-        Intent intent = new Intent(this, medication.class);
+        Intent intent = new Intent(this, ProfileSelector.class);
         startActivity(intent);
     }
 

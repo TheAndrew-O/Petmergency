@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddMedication">
+    tools:context=".Add_Appoitment">
     <include layout="@layout/toolbar3"/>
 
 
@@ -38,12 +38,12 @@
                 android:layout_marginTop="70dp">
 
                 <EditText
-                    android:id="@+id/add_med_name"
+                    android:id="@+id/add_loc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Medication"
+                    android:inputType="text"
+                    android:hint="Location"
                     android:gravity="center_horizontal"/>
 
             </LinearLayout>
@@ -55,12 +55,12 @@
                 android:layout_marginTop="20dp">
 
                 <EditText
-                    android:id="@+id/add_dosage"
+                    android:id="@+id/add_app_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="number"
-                    android:hint="Dosage"
+                    android:inputType="textPersonName"
+                    android:hint="Description"
                     android:gravity="center_horizontal"/>
 
             </LinearLayout>
@@ -104,7 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:id="@+id/submit_medication"
+                    android:id="@+id/submit_appoint"
                     android:text="Enter"
                     android:textSize="10dp"
                     android:backgroundTint="@color/Tomato"/>

@@ -75,8 +75,16 @@ public class Notes extends AppCompatActivity {
         menu_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Notes.this, "CLICKED",Toast.LENGTH_SHORT).show();
                 openMenu(view);
+            }
+        });
+
+        ImageView prof_but = findViewById(R.id.view_profile);
+        prof_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(Notes.this, ProfileSelector2.class);
+                startActivity(intent2);
             }
         });
 

@@ -30,7 +30,10 @@ import android.widget.Toast;
 //import android.widget.Toolbar;
 import androidx.appcompat.widget.Toolbar;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class medication extends AppCompatActivity {
 
@@ -38,6 +41,7 @@ public class medication extends AppCompatActivity {
     MyDatabaseHelper medDB;
     ArrayList<String> id, name, dosage, date;
     private Button add_med;
+    private CalendarView calendarView;
     CustomAdapter customAdapter;
 
     @Override
@@ -50,6 +54,7 @@ public class medication extends AppCompatActivity {
 //                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
         setContentView(R.layout.activity_medication);
+        calendarView = (CalendarView)findViewById(R.id.calendar);
 
 //        Toolbar toolbar = findViewById(R.id.toolbar_med);
 //        setSupportActionBar(toolbar);
@@ -64,6 +69,15 @@ public class medication extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openMenu(view);
+            }
+        });
+
+        ImageView prof_but = findViewById(R.id.view_profile);
+        prof_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(medication.this, ProfileSelector2.class);
+                startActivity(intent2);
             }
         });
 
@@ -121,6 +135,22 @@ public class medication extends AppCompatActivity {
                 .build();
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         manager.notify(1,notification);
+
+        if(!id.isEmpty()){
+            for(int i = 0; i < id.size(); i++){
+                String get_date = date.get(0);
+                calendarView.setDate(1);
+                Date date_disp = new Date();
+                SimpleDateFormat form = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                try {
+                    date_disp = form.parse(get_date);
+                    long epoch = date_disp.getTime();
+                    calendarView.setDate(epoch);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
 
         customAdapter = new CustomAdapter(medication.this, this, id, name, dosage, date);
         recyclerView.setAdapter(customAdapter);
