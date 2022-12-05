@@ -7,7 +7,7 @@
             android:icon="@drawable/ic_baseline_medical_services_24"/>
         <item android:id="@+id/nav_notes" android:title="Notes"
             android:icon="@drawable/ic_baseline_calendar_month_24"/>
-        <item android:id="@+id/nav_appoitments" android:title="Appoitments"
+        <item android:id="@+id/nav_appoitments" android:title="Appointment"
             android:icon="@drawable/ic_baseline_notes_24"/>
         <item android:id="@+id/nav_emergency" android:title="Emergency"
             android:icon="@drawable/ic_baseline_warning_24"/>

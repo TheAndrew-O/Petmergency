@@ -25,6 +25,7 @@ public class Dog3 extends AppCompatActivity {
     private Button open_med;
     private Button open_notes;
     private ImageButton swap_but;
+    private ImageButton edit_but;
 
 
     String calendar = "com.google.android.calendar";
@@ -43,6 +44,15 @@ public class Dog3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openSwapProfileActivity();
+            }
+        });
+
+        edit_but = findViewById(R.id.edit_profile);
+        edit_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dog3.this, Edit_Dog3.class);
+                startActivity(intent);
             }
         });
 
@@ -107,16 +117,18 @@ public class Dog3 extends AppCompatActivity {
     }
 
     public void openAppoitments(){
-        Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
-        Calendar beginTime = Calendar.getInstance();
-        beginTime.set(2022, 9, 23, 10, 30);
-        Calendar endTime = Calendar.getInstance();
-        endTime.set(2022, 9, 23, 11, 30);
-        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
-        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
-        calendarIntent.putExtra(CalendarContract.Events.TITLE, "Pet's Appoitment");
-        calendarIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Location");
-        startActivity(calendarIntent);
+//        Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
+//        Calendar beginTime = Calendar.getInstance();
+//        beginTime.set(2022, 9, 23, 10, 30);
+//        Calendar endTime = Calendar.getInstance();
+//        endTime.set(2022, 9, 23, 11, 30);
+//        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
+//        calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
+//        calendarIntent.putExtra(CalendarContract.Events.TITLE, "Pet's Appoitment");
+//        calendarIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Location");
+//        startActivity(calendarIntent);
+        Intent intent = new Intent(this, appointments.class);
+        startActivity(intent);
     }
 
     private void openMenu(View v) {
@@ -141,7 +153,7 @@ public class Dog3 extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){
-                    Intent intent = new Intent(Dog3.this, MainActivity.class);
+                    Intent intent = new Intent(Dog3.this, Dog3Emergency.class);
                     startActivity(intent);
                 }
                 return false;

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".Dog3Emergency">
+
+    <include layout="@layout/toolbar3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="45dp">
+
+                <android.widget.Button
+                    android:id="@+id/button_choke"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/choke_but"
+                    android:layout_marginHorizontal="20dp"
+                    android:textColor="@color/White"
+                    android:textSize="40sp" />
+
+                <android.widget.Button
+                    android:id="@+id/button_cardiac_arrest"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="@drawable/cardiac_layout"
+                    android:textSize="40sp" />
+
+                <android.widget.Button
+                    android:id="@+id/button_shock"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="@drawable/uncon_button_layout"
+                    android:textSize="40sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choking"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="37dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heart Attack"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="28dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shock"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="40dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+                <android.widget.Button
+                    android:id="@+id/button_poison"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/poison_button_layout"
+                    android:layout_marginHorizontal="20dp"
+                    android:textColor="@color/White"
+                    android:textSize="40sp" />
+
+                <android.widget.Button
+                    android:id="@+id/button_broken_bone"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="@drawable/broken_bone_layout"
+                    android:textSize="40sp" />
+
+                <android.widget.Button
+                    android:id="@+id/button_bleed"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/bleed_button"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Poisoning"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="32dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Broken Bone"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="28dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bleeding"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+                <android.widget.Button
+                    android:id="@+id/button_burn"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/burn_layout"
+                    android:layout_marginHorizontal="20dp"
+                    android:textColor="@color/White"
+                    android:textSize="40sp" />
+
+                <android.widget.Button
+                    android:id="@+id/button_heat_stroke"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/heat_stroke_layout"
+                    android:textSize="40sp" />
+
+                <android.widget.Button
+                    android:id="@+id/button_bite"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/bite_button_layout"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Burn"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="52dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heat Stroke"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="26dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bug Bite"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"/>
+            </LinearLayout>
+            <android.widget.Button
+                android:id="@+id/button_call"
+                android:layout_width="360dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/call_vet_button"
+                android:text="Call Vet"
+                android:textColor="@color/White"
+                android:textAllCaps="false"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

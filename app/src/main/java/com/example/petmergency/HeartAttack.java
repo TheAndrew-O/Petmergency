@@ -44,6 +44,15 @@ public class HeartAttack extends AppCompatActivity {
             }
         });
 
+        ImageView prof_but = findViewById(R.id.view_profile);
+        prof_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(HeartAttack.this, ProfileSelector.class);
+                startActivity(intent2);
+            }
+        });
+
         mainFab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         callVetFab = (FloatingActionButton) findViewById(R.id.call_vet_btn);
         homePageFab = (FloatingActionButton) findViewById(R.id.home_page_btn);

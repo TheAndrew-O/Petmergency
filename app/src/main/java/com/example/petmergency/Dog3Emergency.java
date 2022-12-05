@@ -1,34 +1,25 @@
 package com.example.petmergency;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-//import android.widget.Toast;
-import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.widget.PopupMenu;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class Dog3Emergency extends AppCompatActivity {
+
     private Button choke_but, heart_but, shock_but, poison_but, brokenBone_but, burn_but, heat_but, sting_but;
     private Button call_but;
     private Button bleed_but;
@@ -41,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dog3_emergency);
 
 
         choke_but = findViewById(R.id.button_choke);
@@ -94,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         heart_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HeartAttack.class);
+                Intent intent = new Intent(Dog3Emergency.this, HeartAttack.class);
                 startActivity(intent);
             }
         });
@@ -103,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         shock_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Shock.class);
+                Intent intent = new Intent(Dog3Emergency.this, Shock.class);
                 startActivity(intent);
             }
         });
@@ -112,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         poison_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Poison.class);
+                Intent intent = new Intent(Dog3Emergency.this, Poison.class);
                 startActivity(intent);
             }
         });
@@ -121,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         brokenBone_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, BrokenBone.class);
+                Intent intent = new Intent(Dog3Emergency.this, BrokenBone.class);
                 startActivity(intent);
             }
         });
@@ -130,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         burn_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Burn.class);
+                Intent intent = new Intent(Dog3Emergency.this, Burn.class);
                 startActivity(intent);
             }
         });
@@ -139,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         heat_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HeatStroke.class);
+                Intent intent = new Intent(Dog3Emergency.this, HeatStroke.class);
                 startActivity(intent);
             }
         });
@@ -148,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         sting_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, BugBite.class);
+                Intent intent = new Intent(Dog3Emergency.this, BugBite.class);
                 startActivity(intent);
             }
         });
@@ -165,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openChokeActivity(){
-        Intent intent = new Intent(this, SelectDogSize.class);
+        Intent intent = new Intent(this, chokingLarge.class);
         startActivity(intent);
     }
 
@@ -180,33 +171,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openProfileActivity(){
-        Intent intent2 = new Intent(this, ProfileSelector.class);
+        Intent intent2 = new Intent(this, ProfileSelector2.class);
         startActivity(intent2);
     }
 
     private void openMenu(View v) {
-        PopupMenu popupMenu = new PopupMenu(MainActivity.this, v);
+        PopupMenu popupMenu = new PopupMenu(Dog3Emergency.this, v);
         popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(MainActivity.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Dog3Emergency.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
                 }
                 if(item.getItemId() == R.id.nav_notes){
-                    Intent intent = new Intent(MainActivity.this,Notes.class);
+                    Intent intent = new Intent(Dog3Emergency.this,Notes.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_profile){
-                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                    Intent intent = new Intent(Dog3Emergency.this, ProfileActivity.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_med){
-                    Intent intent = new Intent(MainActivity.this, medication.class);
+                    Intent intent = new Intent(Dog3Emergency.this, medication.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){
-                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    Intent intent = new Intent(Dog3Emergency.this, MainActivity.class);
                     startActivity(intent);
                 }
                 return false;
@@ -214,6 +205,5 @@ public class MainActivity extends AppCompatActivity {
         });
         popupMenu.show();
     }
-
 
 }

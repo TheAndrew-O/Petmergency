@@ -24,11 +24,11 @@
             app:srcCompat="@drawable/dog_icon" />
 
         <ImageView
+            android:id="@+id/view_profile"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/view_profile"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_dog4"/>
+            android:src="@drawable/ic_dog4" />
 
     </RelativeLayout>
 

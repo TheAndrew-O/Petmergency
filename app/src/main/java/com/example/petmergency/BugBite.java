@@ -94,6 +94,15 @@ public class BugBite extends AppCompatActivity {
                 openMenu(view);
             }
         });
+
+        ImageView prof_but = findViewById(R.id.view_profile);
+        prof_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(BugBite.this, ProfileSelector.class);
+                startActivity(intent2);
+            }
+        });
     }
 
     private void animateFab() {
