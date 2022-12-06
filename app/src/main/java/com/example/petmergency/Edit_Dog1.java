@@ -4,38 +4,30 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 
-import android.graphics.drawable.AnimationDrawable;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class CreateProfile extends AppCompatActivity {
+public class Edit_Dog1 extends AppCompatActivity {
 
+    private Button cancel_edit, delete_acc, enter_edit;
     private final int GALLERY_REQUEST_CODE = 1000;
     ImageView prof_img;
 
-    private Button create_prof_but;
     private AnimationDrawable anim_background;
-//    RelativeLayout relativeLayout;
     LinearLayout linearLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
-//        getSupportActionBar().hide(); // hide the title bar
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-        setContentView(R.layout.activity_create_profile);
+        setContentView(R.layout.activity_edit_dog1);
 
         linearLayout = (LinearLayout)findViewById(R.id.create_profile_card);
         anim_background = (AnimationDrawable)linearLayout.getBackground();
@@ -53,11 +45,28 @@ public class CreateProfile extends AppCompatActivity {
             }
         });
 
-        create_prof_but = findViewById(R.id.submit_profile);
-        create_prof_but.setOnClickListener(new View.OnClickListener() {
+        cancel_edit = findViewById(R.id.cancel_edit);
+        cancel_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openPetProfile();
+            }
+        });
+
+        enter_edit = findViewById(R.id.submit_profile);
+        enter_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPetProfile();
+            }
+        });
+
+        delete_acc = findViewById(R.id.delete_account);
+        delete_acc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Edit_Dog1.this, ProfileActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -68,7 +77,6 @@ public class CreateProfile extends AppCompatActivity {
                 openMenu(view);
             }
         });
-
     }
 
     @Override
@@ -82,10 +90,40 @@ public class CreateProfile extends AppCompatActivity {
         }
     }
 
-
     public void openPetProfile(){
-        Intent intent = new Intent(this, Dog3.class);
+        Intent intent = new Intent(Edit_Dog1.this, Dog1.class);
         startActivity(intent);
+    }
+
+    private void openMenu(View v) {
+        PopupMenu popupMenu = new PopupMenu(Edit_Dog1.this, v);
+        popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId() == R.id.nav_appoitments){
+                    Intent intent = new Intent(Edit_Dog1.this, appointments.class);
+                }
+                if(item.getItemId() == R.id.nav_notes){
+                    Intent intent = new Intent(Edit_Dog1.this,Notes.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_profile){
+                    Intent intent = new Intent(Edit_Dog1.this, Dog1.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_med){
+                    Intent intent = new Intent(Edit_Dog1.this, medication.class);
+                    startActivity(intent);
+                }
+                if(item.getItemId() == R.id.nav_emergency){
+                    Intent intent = new Intent(Edit_Dog1.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return false;
+            }
+        });
+        popupMenu.show();
     }
 
     protected void onResume(){
@@ -99,38 +137,5 @@ public class CreateProfile extends AppCompatActivity {
         if(anim_background != null && !anim_background.isRunning()){
             anim_background.start();
         }
-    }
-
-    private void openMenu(View v) {
-        PopupMenu popupMenu = new PopupMenu(CreateProfile.this, v);
-        popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if(item.getItemId() == R.id.nav_appoitments){
-                    Intent intent = new Intent(CreateProfile.this, ProfileActivity.class);
-                    startActivity(intent);
-                }
-                if(item.getItemId() == R.id.nav_notes){
-                    Intent intent = new Intent(CreateProfile.this,ProfileActivity.class);
-                    startActivity(intent);
-                }
-                if(item.getItemId() == R.id.nav_profile){
-                    Intent intent = new Intent(CreateProfile.this, ProfileActivity.class);
-                    startActivity(intent);
-                }
-                if(item.getItemId() == R.id.nav_med){
-                    Intent intent = new Intent(CreateProfile.this, ProfileActivity.class);
-                    startActivity(intent);
-                }
-                if(item.getItemId() == R.id.nav_emergency){
-                    Intent intent = new Intent(CreateProfile.this, MainActivity.class);
-                    startActivity(intent);
-                }
-                return false;
-            }
-        });
-        popupMenu.show();
-
     }
 }

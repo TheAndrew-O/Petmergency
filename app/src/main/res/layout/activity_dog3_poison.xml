@@ -4,87 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bleedingInternal">
-
+    tools:context=".Dog3Poison">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:orientation="vertical">
+
             <TextView
-                android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bleeding Internal"
-                android:textColor="@color/black"
                 android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="30sp"/>
+                android:layout_marginTop="5dp"
+                android:text="Poisoning"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Step 1: Keep the dog calm and quiet."
+                android:text="Step 1: Check For Signs"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="191dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/fade_rg"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Step 1a: Wrap the dog in a towel or blanket and speak softly and reassuringly.\n\n Step1b: Make sure the dog doesn't move around too much by gently holding it"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
-
-
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:padding="3dp"
-                android:src="@drawable/blanket_wrap" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Step 2: Seek veterinary attention immediately."
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_marginBottom="40dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/fade_rg"
+                android:background="@drawable/fade_gg"
                 android:orientation="horizontal"
                 android:padding="3dp">
 
@@ -96,17 +54,64 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Signs of Poisoning include:\n\n - Dilated Pupils\n - Drooling/Foaming at the mouth.\n - Seizures\n - Vomitting or Diarrhea\n - Abnormal behavior"
                         android:textColor="@color/white"
-                        android:text="Step 2a: Ensure the safety of your dog by visiting the vet and having the wound treated professionally."
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Step 2: Call/Visit Your Vet Immediately"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fade_gg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Step 2a: If your dog is already showing signs of poisoning, visit the vet immediately."
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/call_vet"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Vet"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:background="@color/EmergencyRed"/>
+
+
         </LinearLayout>
 
     </ScrollView>
-
-    <include layout="@layout/toolbar"></include>
+    <include layout="@layout/toolbar3"/>
 
     <include layout="@layout/floating_action_button"/>
 

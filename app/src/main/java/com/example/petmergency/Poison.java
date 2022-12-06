@@ -34,7 +34,7 @@ public class Poison extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:16127460300"));
+                call.setData(Uri.parse("tel:8832201880"));
                 startActivity(call);
             }
         });
@@ -62,7 +62,7 @@ public class Poison extends AppCompatActivity {
                 animateFab();
 
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:16127460300"));
+                call.setData(Uri.parse("tel:8832201880"));
 
                 startActivity(call);
             }
@@ -144,18 +144,19 @@ public class Poison extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if (item.getItemId() == R.id.nav_appoitments) {
-                    Toast.makeText(Poison.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Poison.this, ProfileSelector.class);
+                    startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_notes) {
-                    Intent intent = new Intent(Poison.this, Notes.class);
+                    Intent intent = new Intent(Poison.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_profile) {
-                    Intent intent = new Intent(Poison.this, Dog3.class);
+                    Intent intent = new Intent(Poison.this, ProfileActivity.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_med) {
-                    Intent intent = new Intent(Poison.this, medication.class);
+                    Intent intent = new Intent(Poison.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_emergency) {

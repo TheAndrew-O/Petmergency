@@ -93,7 +93,7 @@ public class appointments extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){
-                    Intent intent = new Intent(appointments.this, MainActivity.class);
+                    Intent intent = new Intent(appointments.this, Dog3Emergency.class);
                     startActivity(intent);
                 }
                 return false;

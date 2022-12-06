@@ -63,18 +63,19 @@ public class SelectDogSize extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(SelectDogSize.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SelectDogSize.this, ProfileSelector.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
-                    Intent intent = new Intent(SelectDogSize.this,Notes.class);
+                    Intent intent = new Intent(SelectDogSize.this,ProfileSelector.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_profile){
-                    Intent intent = new Intent(SelectDogSize.this, Dog3.class);
+                    Intent intent = new Intent(SelectDogSize.this, ProfileActivity.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_med){
-                    Intent intent = new Intent(SelectDogSize.this, medication.class);
+                    Intent intent = new Intent(SelectDogSize.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){

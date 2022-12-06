@@ -4,44 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bleedingTorso">
-
+    tools:context=".Dog3Choking">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:orientation="vertical">
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bleeding Torso/Leg"
+                android:text="Choking (Large Dog)"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="30sp"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Step 1: Restrain the dog if necessary."
+                android:textAlignment="center"
+                android:text="Step 1: Gently Restrain the dog to prevent being bitten."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/fade_bg"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Step 1a: Look into the pet's mouth to see if a foreign object is visible.\n\nStep 1b:  If you see an object, gently try to remove it with pliers or tweezers, but be careful not to push the object further down the throat.\n\nDon't spend a lot of time trying to remove it if it's not easy to reach—don't delay, try Step 2."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="319dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/dogchokingfirst" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:text="Step 2: If you can't dislodge the item, perform a Heimlich Maneuver"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="310dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/fade_rg"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/fade_bg"
                 android:orientation="horizontal"
                 android:padding="3dp">
 
@@ -54,45 +95,38 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Step 1a: Hold the dog in place so that it cannot move.\n\nStep 1b: If you are unable to hold the dog in place, secure a leash on the dog and tie it around a fixed object.\n\nStep 1c: If the dog is acting aggressive towards you, place a muzzle on the dog to protect yourself."
-                        android:textColor="@color/white"
+                        android:text="Step 2a: From behind the dog, place your closed fist under the hollow under the rib cage and grab the fist with your other hand.\n\nNow push upward and inward sharply in the direction of the dog’s head. This should force air out of the lungs to help expel the invader. Remove the object once dislodged.\n\nRefer to the image below if unsure how to perform the Heimich Maneuver."
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
             </LinearLayout>
+            <ImageView
+                android:layout_width="319dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/heimlichdog" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Step 2: Treat the wound"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:text="Step 3: If Your Dog Doesn’t Resume Breathing, Perform CPR"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
-            <ImageView
-                android:layout_width="319dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:padding="3dp"
-                android:src="@drawable/wound" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Object is protruding from the wound."
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
 
             <LinearLayout
                 android:layout_width="319dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/fade_rg"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/fade_bg"
                 android:orientation="horizontal"
                 android:padding="3dp">
 
@@ -105,70 +139,40 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Step 2a: If an object is protruding from the wound, do not remove it.\n\nPress clean gauze or cloth over the wound and apply pressure with your hands until the bleeding stops.\nThis should take a minimum of 3 minutes.\n\nIf blood soaks through the dressing, do not remove it. Apply more dressing and continue to apply pressure until the bleeding stops."
-                        android:textColor="@color/white"
+                        android:text="Step 3a: Lay the dog down on its side and kneel next to it such that your knees are pushing against the dog's back.\n\nStep 3b: Place the palm of your hand on the widest part of the dog's chest and place your other hand on top, interlocking your fingers.\n\nWith your shoulders directly above your hands, push down on the dog's chest so that it compresses 1/3 or 1/2 way down.\n\nRepeat 100 to 120 compressions per minute."
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
             </LinearLayout>
-
 
             <ImageView
                 android:layout_width="319dp"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
                 android:padding="3dp"
-                android:src="@drawable/wrap_wound" />
+                android:src="@drawable/smalldogcpr" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Object is NOT protruding from the wound."
+
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:text="Step 4:Always take the dog for a follow-up vet visit after a serious choking incident"
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
-
-            <LinearLayout
-                android:layout_width="319dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/fade_rg"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Step 2b: Press clean gauze or cloth over the wound and apply pressure with your hands until the bleeding stops.\nThis should take a minimum of 3 minutes.\n\nIf blood soaks through the dressing, do not remove it. Apply more dressing and continue to apply pressure until the bleeding stops.\n\nStep 2C: If the bleeding has stopped, secure the dressing in place by wrapping the wound with gauze or medical tape."
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
-                </LinearLayout>
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Step 3: Seek veterinary attention immediately."
-                android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
             <LinearLayout
                 android:layout_width="319dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/fade_rg"
+                android:layout_marginBottom="90dp"
+                android:background="@drawable/fade_bg"
                 android:orientation="horizontal"
                 android:padding="3dp">
 
@@ -181,8 +185,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textColor="@color/white"
-                        android:text="Step 3a: Ensure the safety of your dog by visiting the vet and having the wound treated professionally."
+                        android:text="Step 4a: He or she may have damage to the mouth and throat, or there might be other items that made their way into the digestive tract"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
@@ -192,7 +196,8 @@
     </ScrollView>
 
 
-    <include layout="@layout/toolbar"></include>
-    <include layout="@layout/floating_action_button"/>
+    <include layout="@layout/toolbar3"/>
+
+    <include layout="@layout/floating_action_button" />
 
 </RelativeLayout>

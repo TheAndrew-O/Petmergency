@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateProfile">
-    <include layout="@layout/toolbar"></include>
-
-
+    tools:context=".Edit_Dog1">
+    <include layout="@layout/toolbar1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +27,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:id="@+id/profile_pic"
-                android:src="@drawable/ic_profile"/>
+                android:src="@drawable/ic_dog1"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,39 +38,39 @@
                 android:backgroundTint="@color/Tomato"/>
 
 
-                <LinearLayout
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/edit_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp">
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Rover"
+                    android:gravity="center_horizontal"/>
 
-                    <EditText
-                        android:id="@+id/edit_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:hint="Name"
-                        android:gravity="center_horizontal"/>
+            </LinearLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
 
-                <LinearLayout
+                <EditText
+                    android:id="@+id/edit_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp">
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="3 Years"
+                    android:gravity="center_horizontal"/>
 
-                    <EditText
-                        android:id="@+id/edit_age"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="number"
-                        android:hint="Age"
-                        android:gravity="center_horizontal"/>
-
-                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -86,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="number"
-                    android:hint="Weight"
+                    android:hint="42 lbs"
                     android:gravity="center_horizontal"/>
 
             </LinearLayout>
@@ -103,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:hint="*Clinic"
+                    android:hint="Modern Love Veterinary"
                     android:gravity="center_horizontal"/>
 
             </LinearLayout>
@@ -113,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="10dp">
 
                 <EditText
                     android:id="@+id/edit_vet_number"
@@ -121,16 +119,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="phone"
-                    android:hint="*Emergency Number"
+                    android:hint="Emergency Number"
                     android:gravity="center_horizontal"/>
-
-                <TextView
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="*Optional, can be added later."
-                    android:textSize="10sp"
-                    android:layout_marginTop="20dp"/>
 
             </LinearLayout>
 
@@ -148,6 +138,29 @@
                     android:text="Enter"
                     android:textSize="10dp"
                     android:backgroundTint="@color/Tomato"/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_marginRight="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:backgroundTint="@color/EmergencyRed"
+                    android:id="@+id/cancel_edit"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DELETE"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:backgroundTint="@color/EmergencyRed"
+                    android:id="@+id/delete_account"/>
             </LinearLayout>
 
         </LinearLayout>

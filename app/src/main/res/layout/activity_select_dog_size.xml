@@ -30,6 +30,12 @@
             android:textSize="30dp"
             android:text="Larger Dog"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Small Dog: 22 lbs or less"/>
+
     </LinearLayout>
 
 </RelativeLayout>

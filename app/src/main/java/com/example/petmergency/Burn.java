@@ -33,7 +33,7 @@ public class Burn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:16127460300"));
+                call.setData(Uri.parse("tel:8832201880"));
 
                 startActivity(call);
             }
@@ -62,7 +62,7 @@ public class Burn extends AppCompatActivity {
                 animateFab();
 
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:16127460300"));
+                call.setData(Uri.parse("tel:8832201880"));
 
                 startActivity(call);
             }
@@ -144,18 +144,19 @@ public class Burn extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if (item.getItemId() == R.id.nav_appoitments) {
-                    Toast.makeText(Burn.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Burn.this, ProfileSelector.class);
+                    startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_notes) {
-                    Intent intent = new Intent(Burn.this, Notes.class);
+                    Intent intent = new Intent(Burn.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_profile) {
-                    Intent intent = new Intent(Burn.this, Dog3.class);
+                    Intent intent = new Intent(Burn.this, ProfileActivity.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_med) {
-                    Intent intent = new Intent(Burn.this, medication.class);
+                    Intent intent = new Intent(Burn.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_emergency) {

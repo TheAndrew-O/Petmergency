@@ -122,10 +122,11 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(ProfileActivity.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ProfileActivity.this, ProfileSelector.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
-                    Intent intent = new Intent(ProfileActivity.this,Notes.class);
+                    Intent intent = new Intent(ProfileActivity.this,ProfileSelector.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_profile){
@@ -133,7 +134,7 @@ public class ProfileActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_med){
-                    Intent intent = new Intent(ProfileActivity.this, medication.class);
+                    Intent intent = new Intent(ProfileActivity.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){

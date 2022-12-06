@@ -124,7 +124,8 @@ public class AddMedication extends AppCompatActivity implements DatePickerDialog
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(AddMedication.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddMedication.this, appointments.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
                     Intent intent = new Intent(AddMedication.this,Notes.class);

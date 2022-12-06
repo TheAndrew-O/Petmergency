@@ -164,7 +164,8 @@ public class medication extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(medication.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(medication.this, appointments.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
                     Intent intent = new Intent(medication.this,Notes.class);
@@ -179,7 +180,7 @@ public class medication extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){
-                    Intent intent = new Intent(medication.this, MainActivity.class);
+                    Intent intent = new Intent(medication.this, Dog3Emergency.class);
                     startActivity(intent);
                 }
                 return false;

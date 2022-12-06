@@ -61,7 +61,7 @@ public class BugBite extends AppCompatActivity {
                 animateFab();
 
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:16127460300"));
+                call.setData(Uri.parse("tel:8832201880"));
 
                 startActivity(call);
             }
@@ -143,18 +143,19 @@ public class BugBite extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if (item.getItemId() == R.id.nav_appoitments) {
-                    Toast.makeText(BugBite.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(BugBite.this, ProfileSelector.class);
+                    startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_notes) {
-                    Intent intent = new Intent(BugBite.this, Notes.class);
+                    Intent intent = new Intent(BugBite.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_profile) {
-                    Intent intent = new Intent(BugBite.this, Dog3.class);
+                    Intent intent = new Intent(BugBite.this, ProfileActivity.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_med) {
-                    Intent intent = new Intent(BugBite.this, medication.class);
+                    Intent intent = new Intent(BugBite.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_emergency) {

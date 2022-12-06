@@ -55,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Step 1a: Hold the dog in place so that it cannot move.\n\nStep 1b: If you are unable to hold the dog in place, secure a leash on the dog and tie it around a fixed object.\n\nStep 1c: If the dog is acting aggressive towards you, place a muzzle on the dog to protect yourself."
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
@@ -99,7 +99,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Step 2a: Press clean gauze or cloth over the wound and apply pressure with your hands until the bleeding stops.\nThis should take a minimum of 3 minutes.\n\nIf blood soaks through the dressing, do not remove it. Apply more dressing and continue to apply pressure until the bleeding stops.\n\nStep 2b: If the bleeding has stopped, secure the dressing in place by wrapping the wound with gauze or medical tape."
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
@@ -116,6 +116,7 @@
             <LinearLayout
                 android:layout_width="319dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/fade_rg"
@@ -131,7 +132,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:text="Step 3a: Ensure the safety of your dog by visiting the vet and having the wound treated professionally."
                         android:textSize="20sp"
                         android:textStyle="bold"></TextView>

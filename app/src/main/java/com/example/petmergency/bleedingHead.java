@@ -49,7 +49,7 @@ public class bleedingHead extends AppCompatActivity {
                 animateFab();
 
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:16127460300"));
+                call.setData(Uri.parse("tel:8832201880"));
 
                 startActivity(call);
             }
@@ -130,10 +130,11 @@ public class bleedingHead extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(bleedingHead.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(bleedingHead.this, ProfileSelector.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
-                    Intent intent = new Intent(bleedingHead.this,Notes.class);
+                    Intent intent = new Intent(bleedingHead.this,ProfileSelector.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_profile){
@@ -141,7 +142,7 @@ public class bleedingHead extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_med){
-                    Intent intent = new Intent(bleedingHead.this, medication.class);
+                    Intent intent = new Intent(bleedingHead.this, ProfileSelector.class);
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){

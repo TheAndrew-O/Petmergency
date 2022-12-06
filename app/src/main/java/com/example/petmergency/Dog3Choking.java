@@ -1,6 +1,8 @@
 package com.example.petmergency;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,17 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class LegSplint extends AppCompatActivity {
-
-    ImageView menu_but;
-    private Button return_bone;
+public class Dog3Choking extends AppCompatActivity {
     private FloatingActionButton mainFab, callVetFab, homePageFab, locateVetFab;
     private Animation fabOpen, fabClose, rotateForward, rotateBackward;
     private boolean isOpen = false;
@@ -27,16 +24,8 @@ public class LegSplint extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leg_splint);
 
-        return_bone = findViewById(R.id.retrun_bone);
-        return_bone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LegSplint.this, BrokenBone.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_dog3_choking);
 
         mainFab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         callVetFab = (FloatingActionButton) findViewById(R.id.call_vet_btn);
@@ -61,7 +50,7 @@ public class LegSplint extends AppCompatActivity {
                 animateFab();
 
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:8832201880"));
+                call.setData(Uri.parse("tel:7633374433"));
 
                 startActivity(call);
             }
@@ -79,15 +68,14 @@ public class LegSplint extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 animateFab();
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Veterinary Hospital");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Vet Partners Minneapolis");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
             }
         });
 
-
-        menu_but = findViewById(R.id.menu_open);
+        ImageView menu_but = findViewById(R.id.menu_open);
         menu_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,7 +87,7 @@ public class LegSplint extends AppCompatActivity {
         prof_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(LegSplint.this, ProfileSelector.class);
+                Intent intent2 = new Intent(Dog3Choking.this, ProfileSelector2.class);
                 startActivity(intent2);
             }
         });
@@ -133,39 +121,40 @@ public class LegSplint extends AppCompatActivity {
     }
 
     public void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Dog3Emergency.class);
         startActivity(intent);
     }
 
-    private void openMenu(View view) {
-        PopupMenu popupMenu = new PopupMenu(LegSplint.this,view);
+    private void openMenu(View v) {
+        PopupMenu popupMenu = new PopupMenu(Dog3Choking.this, v);
         popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.nav_appoitments) {
-                    Intent intent = new Intent(LegSplint.this, ProfileSelector.class);
+                if(item.getItemId() == R.id.nav_appoitments){
+                    Intent intent = new Intent(Dog3Choking.this, appointments.class);
                     startActivity(intent);
                 }
-                if (item.getItemId() == R.id.nav_notes) {
-                    Intent intent = new Intent(LegSplint.this, ProfileSelector.class);
+                if(item.getItemId() == R.id.nav_notes){
+                    Intent intent = new Intent(Dog3Choking.this,Notes.class);
                     startActivity(intent);
                 }
-                if (item.getItemId() == R.id.nav_profile) {
-                    Intent intent = new Intent(LegSplint.this, ProfileActivity.class);
+                if(item.getItemId() == R.id.nav_profile){
+                    Intent intent = new Intent(Dog3Choking.this, Dog3.class);
                     startActivity(intent);
                 }
-                if (item.getItemId() == R.id.nav_med) {
-                    Intent intent = new Intent(LegSplint.this, ProfileSelector.class);
+                if(item.getItemId() == R.id.nav_med){
+                    Intent intent = new Intent(Dog3Choking.this, medication.class);
                     startActivity(intent);
                 }
-                if (item.getItemId() == R.id.nav_emergency) {
-                    Intent intent = new Intent(LegSplint.this, MainActivity.class);
+                if(item.getItemId() == R.id.nav_emergency){
+                    Intent intent = new Intent(Dog3Choking.this, Dog3Emergency.class);
                     startActivity(intent);
                 }
                 return false;
             }
         });
+
         popupMenu.show();
     }
 }

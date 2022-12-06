@@ -103,7 +103,7 @@ public class Dog3Emergency extends AppCompatActivity {
         poison_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dog3Emergency.this, Poison.class);
+                Intent intent = new Intent(Dog3Emergency.this, Dog3Poison.class);
                 startActivity(intent);
             }
         });
@@ -156,7 +156,7 @@ public class Dog3Emergency extends AppCompatActivity {
     }
 
     public void openChokeActivity(){
-        Intent intent = new Intent(this, chokingLarge.class);
+        Intent intent = new Intent(this, Dog3Choking.class);
         startActivity(intent);
     }
 
@@ -182,7 +182,8 @@ public class Dog3Emergency extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(Dog3Emergency.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Dog3Emergency.this, appointments.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
                     Intent intent = new Intent(Dog3Emergency.this,Notes.class);

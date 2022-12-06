@@ -16,10 +16,10 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class LegSplint extends AppCompatActivity {
+public class Dog3Poison extends AppCompatActivity {
 
+    private Button call_but;
     ImageView menu_but;
-    private Button return_bone;
     private FloatingActionButton mainFab, callVetFab, homePageFab, locateVetFab;
     private Animation fabOpen, fabClose, rotateForward, rotateBackward;
     private boolean isOpen = false;
@@ -27,14 +27,15 @@ public class LegSplint extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leg_splint);
+        setContentView(R.layout.activity_dog3_poison);
 
-        return_bone = findViewById(R.id.retrun_bone);
-        return_bone.setOnClickListener(new View.OnClickListener() {
+        call_but = findViewById(R.id.call_vet);
+        call_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LegSplint.this, BrokenBone.class);
-                startActivity(intent);
+                Intent call = new Intent(Intent.ACTION_DIAL);
+                call.setData(Uri.parse("tel:7633374433"));
+                startActivity(call);
             }
         });
 
@@ -61,7 +62,7 @@ public class LegSplint extends AppCompatActivity {
                 animateFab();
 
                 Intent call = new Intent(Intent.ACTION_DIAL);
-                call.setData(Uri.parse("tel:8832201880"));
+                call.setData(Uri.parse("tel:7633374433"));
 
                 startActivity(call);
             }
@@ -79,7 +80,7 @@ public class LegSplint extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 animateFab();
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Veterinary Hospital");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Vet Partners Minneapolis");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -99,11 +100,10 @@ public class LegSplint extends AppCompatActivity {
         prof_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(LegSplint.this, ProfileSelector.class);
+                Intent intent2 = new Intent(Dog3Poison.this, ProfileSelector2.class);
                 startActivity(intent2);
             }
         });
-
     }
 
     private void animateFab() {
@@ -133,34 +133,34 @@ public class LegSplint extends AppCompatActivity {
     }
 
     public void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Dog3Emergency.class);
         startActivity(intent);
     }
 
     private void openMenu(View view) {
-        PopupMenu popupMenu = new PopupMenu(LegSplint.this,view);
+        PopupMenu popupMenu = new PopupMenu(Dog3Poison.this,view);
         popupMenu.getMenuInflater().inflate(R.menu.main_menu,popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if (item.getItemId() == R.id.nav_appoitments) {
-                    Intent intent = new Intent(LegSplint.this, ProfileSelector.class);
+                    Intent intent = new Intent(Dog3Poison.this, appointments.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_notes) {
-                    Intent intent = new Intent(LegSplint.this, ProfileSelector.class);
+                    Intent intent = new Intent(Dog3Poison.this, Notes.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_profile) {
-                    Intent intent = new Intent(LegSplint.this, ProfileActivity.class);
+                    Intent intent = new Intent(Dog3Poison.this, Dog3.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_med) {
-                    Intent intent = new Intent(LegSplint.this, ProfileSelector.class);
+                    Intent intent = new Intent(Dog3Poison.this, medication.class);
                     startActivity(intent);
                 }
                 if (item.getItemId() == R.id.nav_emergency) {
-                    Intent intent = new Intent(LegSplint.this, MainActivity.class);
+                    Intent intent = new Intent(Dog3Poison.this, Dog3Emergency.class);
                     startActivity(intent);
                 }
                 return false;

@@ -102,7 +102,8 @@ public class Edit_Dog3 extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(Edit_Dog3.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Edit_Dog3.this, appointments.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
                     Intent intent = new Intent(Edit_Dog3.this,Notes.class);

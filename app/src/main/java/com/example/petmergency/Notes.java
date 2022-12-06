@@ -149,7 +149,8 @@ public class Notes extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if(item.getItemId() == R.id.nav_appoitments){
-                    Toast.makeText(Notes.this, "You Clicked appoitments", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Notes.this, appointments.class);
+                    startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_notes){
                     Intent intent = new Intent(Notes.this,Notes.class);
@@ -164,7 +165,7 @@ public class Notes extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(item.getItemId() == R.id.nav_emergency){
-                    Intent intent = new Intent(Notes.this, MainActivity.class);
+                    Intent intent = new Intent(Notes.this, Dog3Emergency.class);
                     startActivity(intent);
                 }
                 return false;
